@@ -111,8 +111,8 @@ th{color:var(--muted);font-weight:650}
         <div><div class="muted">Report</div><div class="kpi">9.9k</div></div>
       </div>
       <p style="margin-top:12px">
-        <a class="btn primary" href="/media/master-report.pdf" download>PDF</a>
-        <a class="btn" href="/media/master-report.docx" download>DOCX</a>
+        <a class="btn primary" href="./media/master-report.pdf" download>PDF</a>
+        <a class="btn" href="./media/master-report.docx" download>DOCX</a>
         <a class="btn ghost" href="https://github.com/cantgetalonggta-png/grok-command-center/pull/1" target="_blank" rel="noopener">PR #1</a>
       </p>
       <p class="muted">Repo target: cantgetalonggta-png/grok-command-center · Research: isolation & max-out · Media: synthetic fixture</p>
@@ -224,11 +224,11 @@ th{color:var(--muted);font-weight:650}
   <div class="split">
     <div class="card">
       <h1>Contact sheet</h1>
-      <img class="sheet" src="/media/contact-sheet.jpg" alt="keyframe contact sheet"/>
+      <img class="sheet" src="./media/contact-sheet.jpg" alt="keyframe contact sheet"/>
     </div>
     <div class="card">
       <h1>Sample clip</h1>
-      <video controls src="/media/sample-clip.mp4"></video>
+      <video controls src="./media/sample-clip.mp4"></video>
       <h3 style="margin-top:12px">Transcript</h3>
       <pre id="tx-pre">Loading…</pre>
     </div>
@@ -239,8 +239,8 @@ th{color:var(--muted);font-weight:650}
   <div class="card">
     <h1>Deep research report</h1>
     <div class="row">
-      <a class="btn primary" href="/media/master-report.pdf" download>Download PDF</a>
-      <a class="btn" href="/media/master-report.docx" download>Download DOCX</a>
+      <a class="btn primary" href="./media/master-report.pdf" download>Download PDF</a>
+      <a class="btn" href="./media/master-report.docx" download>Download DOCX</a>
       <button class="btn ghost" data-copy="#rs-pre">Copy preview</button>
     </div>
     <p class="muted">Preview of master-report.md (~9.9k words). Full documents via download buttons.</p>
@@ -342,16 +342,16 @@ skillFilter?.addEventListener('change', filterSkills);
 // Load remote texts into pre blocks
 (async () => {
   const map = [
-    ['#gh-pre','/data/github-audit.md'],
-    ['#tx-pre','/media/transcript.txt'],
-    ['#rs-pre','/data/report-preview.md'],
-    ['#tf-pre','/data/taskflow.log'],
-    ['#st-pre','/data/status.md'],
+    ['#gh-pre','./data/github-audit.md'],
+    ['#tx-pre','./media/transcript.txt'],
+    ['#rs-pre','./data/report-preview.md'],
+    ['#tf-pre','./data/taskflow.log'],
+    ['#st-pre','./data/status.md'],
   ];
   for (const [sel,url] of map){
     const el=$(sel); if(el) el.textContent = await getText(url);
   }
-  const skills = await getJSON('/data/skills.json');
+  const skills = await getJSON('./data/skills.json');
   if (skills){
     const n = (skills.custom_skills?.length||0)+(skills.bundled_skills?.length||0);
     const k=$('#kpi-skills'); if(k) k.textContent = String(n);
@@ -359,12 +359,12 @@ skillFilter?.addEventListener('change', filterSkills);
   }
   // health checks
   const checks = [
-    ['/data/skills.json','Skills JSON'],
-    ['/data/github-audit.md','GitHub audit'],
-    ['/media/contact-sheet.jpg','Contact sheet'],
-    ['/media/master-report.pdf','PDF report'],
-    ['/media/master-report.docx','DOCX report'],
-    ['/media/sample-clip.mp4','Sample clip'],
+    ['./data/skills.json','Skills JSON'],
+    ['./data/github-audit.md','GitHub audit'],
+    ['./media/contact-sheet.jpg','Contact sheet'],
+    ['./media/master-report.pdf','PDF report'],
+    ['./media/master-report.docx','DOCX report'],
+    ['./media/sample-clip.mp4','Sample clip'],
   ];
   const host = $('#health-table tbody');
   if(host){
