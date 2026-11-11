@@ -1,0 +1,8 @@
+# Transcript (synthetic media — OpenAI Whisper API key not configured in this container)
+# Source: sample-clip.mp4 (8.0s, 640x360 H.264 + AAC)
+# Audio content: continuous 440 Hz sine tone (A4), mono, generated via ffmpeg lavfi.
+# Speech content: none (non-verbal tone only).
+# Timestamps:
+[00:00.000 → 00:08.000] [non-speech] pure tone 440 Hz, constant amplitude
+# Note: To enable real Whisper transcription, set OPENAI_API_KEY (or OpenClaw skill config)
+# and re-run openai-whisper-api/scripts/transcribe.sh against 03-media/scratch/audio.wav

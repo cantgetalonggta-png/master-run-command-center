@@ -1,0 +1,10 @@
+{
+  "source": "sample-clip.mp4",
+  "duration_s": 8.0,
+  "engine": "synthetic-ground-truth",
+  "whisper_available": false,
+  "reason": "OPENAI_API_KEY unset",
+  "segments": [
+    {"start": 0.0, "end": 8.0, "text": "[non-speech] pure tone 440 Hz"}
+  ]
+}
