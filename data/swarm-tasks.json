@@ -1,0 +1,737 @@
+{
+  "schema": "gta.mrcc.swarm_tasks.v1",
+  "generated_at_utc": "2026-11-14T23:10:21Z",
+  "immediate_execute": true,
+  "task_count": 81,
+  "tasks": [
+    {
+      "task_id": "T001",
+      "agent_code": "DEP-01",
+      "session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "team": "deployment_orchestration",
+      "task_type": "live_application_session",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T002",
+      "agent_code": "DEP-01",
+      "session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "team": "deployment_orchestration",
+      "task_type": "Live-testing-debug-developer-options",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T003",
+      "agent_code": "DEP-01",
+      "session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "team": "deployment_orchestration",
+      "task_type": "live-testing",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T004",
+      "agent_code": "DEP-01",
+      "session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "team": "deployment_orchestration",
+      "task_type": "LIVE-DEPLOYMENT",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T005",
+      "agent_code": "DEP-01",
+      "session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "team": "deployment_orchestration",
+      "task_type": "background_synchronization",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T006",
+      "agent_code": "DEP-02",
+      "session_id": "c8d1c118-9e57-406b-b238-86cdc5363c47",
+      "team": "deployment_orchestration",
+      "task_type": "live_application_session",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T007",
+      "agent_code": "DEP-02",
+      "session_id": "c8d1c118-9e57-406b-b238-86cdc5363c47",
+      "team": "deployment_orchestration",
+      "task_type": "Live-testing-debug-developer-options",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T008",
+      "agent_code": "DEP-02",
+      "session_id": "c8d1c118-9e57-406b-b238-86cdc5363c47",
+      "team": "deployment_orchestration",
+      "task_type": "live-testing",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T009",
+      "agent_code": "DEP-02",
+      "session_id": "c8d1c118-9e57-406b-b238-86cdc5363c47",
+      "team": "deployment_orchestration",
+      "task_type": "LIVE-DEPLOYMENT",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T010",
+      "agent_code": "DEP-02",
+      "session_id": "c8d1c118-9e57-406b-b238-86cdc5363c47",
+      "team": "deployment_orchestration",
+      "task_type": "background_synchronization",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T011",
+      "agent_code": "DEP-03",
+      "session_id": "6fb3883a-da77-49fe-b6ba-46902e21aded",
+      "team": "deployment_orchestration",
+      "task_type": "live_application_session",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T012",
+      "agent_code": "DEP-03",
+      "session_id": "6fb3883a-da77-49fe-b6ba-46902e21aded",
+      "team": "deployment_orchestration",
+      "task_type": "Live-testing-debug-developer-options",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T013",
+      "agent_code": "DEP-03",
+      "session_id": "6fb3883a-da77-49fe-b6ba-46902e21aded",
+      "team": "deployment_orchestration",
+      "task_type": "live-testing",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T014",
+      "agent_code": "DEP-03",
+      "session_id": "6fb3883a-da77-49fe-b6ba-46902e21aded",
+      "team": "deployment_orchestration",
+      "task_type": "LIVE-DEPLOYMENT",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T015",
+      "agent_code": "DEP-03",
+      "session_id": "6fb3883a-da77-49fe-b6ba-46902e21aded",
+      "team": "deployment_orchestration",
+      "task_type": "background_synchronization",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T016",
+      "agent_code": "DEP-04",
+      "session_id": "c1d1e9cc-9602-4cd1-831f-5dd10df9b995",
+      "team": "deployment_orchestration",
+      "task_type": "live_application_session",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T017",
+      "agent_code": "DEP-04",
+      "session_id": "c1d1e9cc-9602-4cd1-831f-5dd10df9b995",
+      "team": "deployment_orchestration",
+      "task_type": "Live-testing-debug-developer-options",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T018",
+      "agent_code": "DEP-04",
+      "session_id": "c1d1e9cc-9602-4cd1-831f-5dd10df9b995",
+      "team": "deployment_orchestration",
+      "task_type": "live-testing",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T019",
+      "agent_code": "DEP-04",
+      "session_id": "c1d1e9cc-9602-4cd1-831f-5dd10df9b995",
+      "team": "deployment_orchestration",
+      "task_type": "LIVE-DEPLOYMENT",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T020",
+      "agent_code": "DEP-04",
+      "session_id": "c1d1e9cc-9602-4cd1-831f-5dd10df9b995",
+      "team": "deployment_orchestration",
+      "task_type": "background_synchronization",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T021",
+      "agent_code": "DEP-05",
+      "session_id": "344f6cd5-1562-4727-9a66-d8593b3e7cfa",
+      "team": "deployment_orchestration",
+      "task_type": "live_application_session",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T022",
+      "agent_code": "DEP-05",
+      "session_id": "344f6cd5-1562-4727-9a66-d8593b3e7cfa",
+      "team": "deployment_orchestration",
+      "task_type": "Live-testing-debug-developer-options",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T023",
+      "agent_code": "DEP-05",
+      "session_id": "344f6cd5-1562-4727-9a66-d8593b3e7cfa",
+      "team": "deployment_orchestration",
+      "task_type": "live-testing",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T024",
+      "agent_code": "DEP-05",
+      "session_id": "344f6cd5-1562-4727-9a66-d8593b3e7cfa",
+      "team": "deployment_orchestration",
+      "task_type": "LIVE-DEPLOYMENT",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T025",
+      "agent_code": "DEP-05",
+      "session_id": "344f6cd5-1562-4727-9a66-d8593b3e7cfa",
+      "team": "deployment_orchestration",
+      "task_type": "background_synchronization",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T026",
+      "agent_code": "DEP-06",
+      "session_id": "64e5eebd-41b5-43ec-a762-c40731a9f2de",
+      "team": "deployment_orchestration",
+      "task_type": "live_application_session",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T027",
+      "agent_code": "DEP-06",
+      "session_id": "64e5eebd-41b5-43ec-a762-c40731a9f2de",
+      "team": "deployment_orchestration",
+      "task_type": "Live-testing-debug-developer-options",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T028",
+      "agent_code": "DEP-06",
+      "session_id": "64e5eebd-41b5-43ec-a762-c40731a9f2de",
+      "team": "deployment_orchestration",
+      "task_type": "live-testing",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T029",
+      "agent_code": "DEP-06",
+      "session_id": "64e5eebd-41b5-43ec-a762-c40731a9f2de",
+      "team": "deployment_orchestration",
+      "task_type": "LIVE-DEPLOYMENT",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T030",
+      "agent_code": "DEP-06",
+      "session_id": "64e5eebd-41b5-43ec-a762-c40731a9f2de",
+      "team": "deployment_orchestration",
+      "task_type": "background_synchronization",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T031",
+      "agent_code": "FE-01",
+      "session_id": "568d6270-a86d-460b-87d7-1535f44a1680",
+      "team": "frontend_engineering",
+      "task_type": "ui_shell_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T032",
+      "agent_code": "FE-01",
+      "session_id": "568d6270-a86d-460b-87d7-1535f44a1680",
+      "team": "frontend_engineering",
+      "task_type": "swarm_view_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T033",
+      "agent_code": "FE-01",
+      "session_id": "568d6270-a86d-460b-87d7-1535f44a1680",
+      "team": "frontend_engineering",
+      "task_type": "static_asset_verify",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T034",
+      "agent_code": "FE-02",
+      "session_id": "e302f5e6-2541-490f-ae94-12467ac46bbe",
+      "team": "frontend_engineering",
+      "task_type": "ui_shell_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T035",
+      "agent_code": "FE-02",
+      "session_id": "e302f5e6-2541-490f-ae94-12467ac46bbe",
+      "team": "frontend_engineering",
+      "task_type": "swarm_view_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T036",
+      "agent_code": "FE-02",
+      "session_id": "e302f5e6-2541-490f-ae94-12467ac46bbe",
+      "team": "frontend_engineering",
+      "task_type": "static_asset_verify",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T037",
+      "agent_code": "FE-03",
+      "session_id": "38e3b225-03e5-41ec-9721-460559aba2d6",
+      "team": "frontend_engineering",
+      "task_type": "ui_shell_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T038",
+      "agent_code": "FE-03",
+      "session_id": "38e3b225-03e5-41ec-9721-460559aba2d6",
+      "team": "frontend_engineering",
+      "task_type": "swarm_view_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T039",
+      "agent_code": "FE-03",
+      "session_id": "38e3b225-03e5-41ec-9721-460559aba2d6",
+      "team": "frontend_engineering",
+      "task_type": "static_asset_verify",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T040",
+      "agent_code": "FE-04",
+      "session_id": "c921f3a6-f5b5-4b22-a0ad-bb44ec3d4cf6",
+      "team": "frontend_engineering",
+      "task_type": "ui_shell_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T041",
+      "agent_code": "FE-04",
+      "session_id": "c921f3a6-f5b5-4b22-a0ad-bb44ec3d4cf6",
+      "team": "frontend_engineering",
+      "task_type": "swarm_view_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T042",
+      "agent_code": "FE-04",
+      "session_id": "c921f3a6-f5b5-4b22-a0ad-bb44ec3d4cf6",
+      "team": "frontend_engineering",
+      "task_type": "static_asset_verify",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T043",
+      "agent_code": "FE-05",
+      "session_id": "60ee66e8-e76a-4fde-ac4b-4bff80a8914e",
+      "team": "frontend_engineering",
+      "task_type": "ui_shell_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T044",
+      "agent_code": "FE-05",
+      "session_id": "60ee66e8-e76a-4fde-ac4b-4bff80a8914e",
+      "team": "frontend_engineering",
+      "task_type": "swarm_view_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T045",
+      "agent_code": "FE-05",
+      "session_id": "60ee66e8-e76a-4fde-ac4b-4bff80a8914e",
+      "team": "frontend_engineering",
+      "task_type": "static_asset_verify",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T046",
+      "agent_code": "FE-06",
+      "session_id": "94d1315d-bc98-4736-82e0-dbb866503f37",
+      "team": "frontend_engineering",
+      "task_type": "ui_shell_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T047",
+      "agent_code": "FE-06",
+      "session_id": "94d1315d-bc98-4736-82e0-dbb866503f37",
+      "team": "frontend_engineering",
+      "task_type": "swarm_view_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T048",
+      "agent_code": "FE-06",
+      "session_id": "94d1315d-bc98-4736-82e0-dbb866503f37",
+      "team": "frontend_engineering",
+      "task_type": "static_asset_verify",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T049",
+      "agent_code": "RS-01",
+      "session_id": "08e87b41-196a-439e-b367-e5814927a65e",
+      "team": "research",
+      "task_type": "public_surface_probe",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T050",
+      "agent_code": "RS-01",
+      "session_id": "08e87b41-196a-439e-b367-e5814927a65e",
+      "team": "research",
+      "task_type": "citation_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T051",
+      "agent_code": "RS-01",
+      "session_id": "08e87b41-196a-439e-b367-e5814927a65e",
+      "team": "research",
+      "task_type": "scope_guard_pass",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T052",
+      "agent_code": "RS-02",
+      "session_id": "843b27c9-64ce-47a4-bc80-8b83e868e21b",
+      "team": "research",
+      "task_type": "public_surface_probe",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T053",
+      "agent_code": "RS-02",
+      "session_id": "843b27c9-64ce-47a4-bc80-8b83e868e21b",
+      "team": "research",
+      "task_type": "citation_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T054",
+      "agent_code": "RS-02",
+      "session_id": "843b27c9-64ce-47a4-bc80-8b83e868e21b",
+      "team": "research",
+      "task_type": "scope_guard_pass",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T055",
+      "agent_code": "RS-03",
+      "session_id": "4e27f581-8882-403b-b406-5a0f7471bb7e",
+      "team": "research",
+      "task_type": "public_surface_probe",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T056",
+      "agent_code": "RS-03",
+      "session_id": "4e27f581-8882-403b-b406-5a0f7471bb7e",
+      "team": "research",
+      "task_type": "citation_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T057",
+      "agent_code": "RS-03",
+      "session_id": "4e27f581-8882-403b-b406-5a0f7471bb7e",
+      "team": "research",
+      "task_type": "scope_guard_pass",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T058",
+      "agent_code": "RS-04",
+      "session_id": "fc8a34dc-62d7-469c-a3f6-e403c7e2cba2",
+      "team": "research",
+      "task_type": "public_surface_probe",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T059",
+      "agent_code": "RS-04",
+      "session_id": "fc8a34dc-62d7-469c-a3f6-e403c7e2cba2",
+      "team": "research",
+      "task_type": "citation_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T060",
+      "agent_code": "RS-04",
+      "session_id": "fc8a34dc-62d7-469c-a3f6-e403c7e2cba2",
+      "team": "research",
+      "task_type": "scope_guard_pass",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T061",
+      "agent_code": "RS-05",
+      "session_id": "2b074235-5eee-474a-8b14-16c950e85200",
+      "team": "research",
+      "task_type": "public_surface_probe",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T062",
+      "agent_code": "RS-05",
+      "session_id": "2b074235-5eee-474a-8b14-16c950e85200",
+      "team": "research",
+      "task_type": "citation_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T063",
+      "agent_code": "RS-05",
+      "session_id": "2b074235-5eee-474a-8b14-16c950e85200",
+      "team": "research",
+      "task_type": "scope_guard_pass",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T064",
+      "agent_code": "RS-06",
+      "session_id": "230bc671-9039-44dd-9ac0-0162ad97cbeb",
+      "team": "research",
+      "task_type": "public_surface_probe",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T065",
+      "agent_code": "RS-06",
+      "session_id": "230bc671-9039-44dd-9ac0-0162ad97cbeb",
+      "team": "research",
+      "task_type": "citation_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T066",
+      "agent_code": "RS-06",
+      "session_id": "230bc671-9039-44dd-9ac0-0162ad97cbeb",
+      "team": "research",
+      "task_type": "scope_guard_pass",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T067",
+      "agent_code": "LC-01",
+      "session_id": "36f15bb7-eb60-4502-8619-2b3e215b5090",
+      "team": "learning_center",
+      "task_type": "onboarding_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T068",
+      "agent_code": "LC-01",
+      "session_id": "36f15bb7-eb60-4502-8619-2b3e215b5090",
+      "team": "learning_center",
+      "task_type": "toolchain_doc_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T069",
+      "agent_code": "LC-01",
+      "session_id": "36f15bb7-eb60-4502-8619-2b3e215b5090",
+      "team": "learning_center",
+      "task_type": "drill_card_rotate",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T070",
+      "agent_code": "LC-02",
+      "session_id": "95ec5721-522b-4876-916d-aac775c2c77c",
+      "team": "learning_center",
+      "task_type": "onboarding_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T071",
+      "agent_code": "LC-02",
+      "session_id": "95ec5721-522b-4876-916d-aac775c2c77c",
+      "team": "learning_center",
+      "task_type": "toolchain_doc_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T072",
+      "agent_code": "LC-02",
+      "session_id": "95ec5721-522b-4876-916d-aac775c2c77c",
+      "team": "learning_center",
+      "task_type": "drill_card_rotate",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T073",
+      "agent_code": "LC-03",
+      "session_id": "4b79e71a-b4dd-4f24-986b-c47a51beb4b4",
+      "team": "learning_center",
+      "task_type": "onboarding_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T074",
+      "agent_code": "LC-03",
+      "session_id": "4b79e71a-b4dd-4f24-986b-c47a51beb4b4",
+      "team": "learning_center",
+      "task_type": "toolchain_doc_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T075",
+      "agent_code": "LC-03",
+      "session_id": "4b79e71a-b4dd-4f24-986b-c47a51beb4b4",
+      "team": "learning_center",
+      "task_type": "drill_card_rotate",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T076",
+      "agent_code": "LC-04",
+      "session_id": "81a402f4-0f69-4434-bbe7-cc4b524087d3",
+      "team": "learning_center",
+      "task_type": "onboarding_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T077",
+      "agent_code": "LC-04",
+      "session_id": "81a402f4-0f69-4434-bbe7-cc4b524087d3",
+      "team": "learning_center",
+      "task_type": "toolchain_doc_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T078",
+      "agent_code": "LC-04",
+      "session_id": "81a402f4-0f69-4434-bbe7-cc4b524087d3",
+      "team": "learning_center",
+      "task_type": "drill_card_rotate",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T079",
+      "agent_code": "LC-05",
+      "session_id": "c5168efe-bc35-4e40-8bd4-1ee91da2e3ad",
+      "team": "learning_center",
+      "task_type": "onboarding_refresh",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T080",
+      "agent_code": "LC-05",
+      "session_id": "c5168efe-bc35-4e40-8bd4-1ee91da2e3ad",
+      "team": "learning_center",
+      "task_type": "toolchain_doc_sync",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    },
+    {
+      "task_id": "T081",
+      "agent_code": "LC-05",
+      "session_id": "c5168efe-bc35-4e40-8bd4-1ee91da2e3ad",
+      "team": "learning_center",
+      "task_type": "drill_card_rotate",
+      "state": "queued_immediate",
+      "execute": "client_background_loop"
+    }
+  ]
+}

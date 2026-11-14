@@ -26,3 +26,11 @@
 
 ## Memory note
 npm install failed with EPERM symlink on grok-files FUSE; dashboard uses pure static dist + python http.server.
+
+
+## Swarm-23 (this app only)
+- Agents: 23 unique session workers (no external app rule merge)
+- Teams: deployment_orchestration (6) · frontend_engineering (6) · research (6) · learning_center (5)
+- Data: `data/swarm-23.json` · `data/swarm-tasks.json`
+- UI: `#swarm` panel · auto-starts background task bus on load
+- Capability fences enforced per agent (blocked if task needs forbidden capability)

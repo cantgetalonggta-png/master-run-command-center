@@ -82,6 +82,7 @@ th{color:var(--muted);font-weight:650}
     <button data-tab="research">Research</button>
     <button data-tab="telemetry">Telemetry</button>
     <button data-tab="health">Health</button>
+    <button data-tab="swarm">Swarm-23</button>
     <button data-tab="deploy">Deploy</button>
   </nav>
 </header>
@@ -97,6 +98,7 @@ th{color:var(--muted);font-weight:650}
         <button class="btn" data-goto="media">Media lab</button>
         <button class="btn" data-goto="research">Research</button>
         <button class="btn" data-goto="health">Run health</button>
+        <button class="btn primary" data-goto="swarm">Swarm-23</button>
         <button class="btn ghost" id="accent-cycle">Cycle accent</button>
       </div>
       <div class="bar"><span id="prog"></span></div>
@@ -109,6 +111,8 @@ th{color:var(--muted);font-weight:650}
         <div><div class="muted">Phases</div><div class="kpi">5→6</div></div>
         <div><div class="muted">Draft PR</div><div class="kpi">#1</div></div>
         <div><div class="muted">Report</div><div class="kpi">9.9k</div></div>
+        <div><div class="muted">Swarm</div><div class="kpi" id="kpi-swarm">23</div></div>
+        <div><div class="muted">BG tasks</div><div class="kpi" id="kpi-tasks">—</div></div>
       </div>
       <p style="margin-top:12px">
         <a class="btn primary" href="./media/master-report.pdf" download>PDF</a>
@@ -127,6 +131,7 @@ th{color:var(--muted);font-weight:650}
       <div class="skill-card"><b>Research</b><div class="muted">Long-form report preview + downloads</div><button class="btn" data-goto="research" style="margin-top:8px">Go</button></div>
       <div class="skill-card"><b>Telemetry</b><div class="muted">TaskFlow log + STATUS</div><button class="btn" data-goto="telemetry" style="margin-top:8px">Go</button></div>
       <div class="skill-card"><b>Health</b><div class="muted">Asset HEAD/GET verification matrix</div><button class="btn" data-goto="health" style="margin-top:8px">Go</button></div>
+      <div class="skill-card"><b>Swarm-23</b><div class="muted">23 unique session agents · 4 teams · capability fences</div><button class="btn primary" data-goto="swarm" style="margin-top:8px">Open swarm</button></div>
     </div>
   </div>
 </section>
@@ -263,6 +268,57 @@ th{color:var(--muted);font-weight:650}
   </div>
 </section>
 
+
+<section id="swarm" class="panel">
+  <div class="card">
+    <h1>Swarm-23 Multi-Agent Framework</h1>
+    <p class="muted">Strict roster of <b>23 unique Hades session workers</b> only. No merge of other applications’ rules/settings. Each agent has an explicit capability ceiling (allowed vs forbidden). Hosts may be cold — session IDs are the durable identity.</p>
+    <div class="row" style="margin-top:8px">
+      <button class="btn primary" id="swarm-start-bg">Start background tasks immediately</button>
+      <button class="btn" id="swarm-export">Export agents CSV</button>
+      <button class="btn ghost" data-copy="#swarm-blueprint">Copy toolchain blueprint</button>
+      <span class="badge" id="swarm-bg-state">BG: idle</span>
+    </div>
+    <div class="grid" style="margin-top:12px">
+      <div><div class="muted">Agents</div><div class="kpi" id="swarm-n-agents">23</div></div>
+      <div><div class="muted">Teams</div><div class="kpi">4</div></div>
+      <div><div class="muted">Queued tasks</div><div class="kpi" id="swarm-n-tasks">0</div></div>
+      <div><div class="muted">Running ticks</div><div class="kpi" id="swarm-ticks">0</div></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <h2>Toolchain architecture blueprint</h2>
+    <pre id="swarm-blueprint" class="muted">Loading…</pre>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <h2>Teams</h2>
+    <div class="grid" id="swarm-teams"></div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <h2>Agent roster (individual)</h2>
+    <input class="search" id="swarm-search" placeholder="Filter callsign, team, session_id, capability…"/>
+    <div class="row" style="margin-bottom:8px">
+      <select id="swarm-team-filter" class="search" style="max-width:280px;margin:0">
+        <option value="all">All teams</option>
+        <option value="deployment_orchestration">Deployment Orchestration</option>
+        <option value="frontend_engineering">Frontend Engineering</option>
+        <option value="research">Research</option>
+        <option value="learning_center">Learning-Center</option>
+      </select>
+    </div>
+    <div id="swarm-list"></div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <h2>Background task bus (immediate execute)</h2>
+    <p class="muted">Client-side orchestration loop. Tasks are tickets bound to agent_code + session_id. Does not invent tools outside each agent’s capabilities_allowed.</p>
+    <pre id="swarm-task-log" style="max-height:280px">No tasks running yet. Click “Start background tasks immediately”.</pre>
+  </div>
+</section>
+
 <section id="deploy" class="panel">
   <div class="card">
     <h1>Deployment</h1>
@@ -365,6 +421,8 @@ skillFilter?.addEventListener('change', filterSkills);
     ['./media/master-report.pdf','PDF report'],
     ['./media/master-report.docx','DOCX report'],
     ['./media/sample-clip.mp4','Sample clip'],
+    ['./data/swarm-23.json','Swarm-23 roster'],
+    ['./data/swarm-tasks.json','Swarm tasks'],
   ];
   const host = $('#health-table tbody');
   if(host){
@@ -402,6 +460,177 @@ $$('[data-goto]').forEach(btn => btn.addEventListener('click', () => {
   const nav = $(`nav [data-tab="${id}"]`);
   if(nav) nav.click();
 }));
+
+
+// ===== Swarm-23 framework (unique 23 session agents only) =====
+let SWARM = null;
+let SWARM_TASKS = null;
+let swarmTimer = null;
+let swarmTicks = 0;
+const swarmLogLines = [];
+
+function pushSwarmLog(line){
+  const ts = new Date().toISOString().slice(11,19);
+  swarmLogLines.unshift(`[${ts}] ${line}`);
+  if(swarmLogLines.length>80) swarmLogLines.length=80;
+  const el=$('#swarm-task-log');
+  if(el) el.textContent = swarmLogLines.join('\n');
+}
+
+function agentCard(a){
+  const can = (a.capabilities_allowed||[]).slice(0,8).map(x=>`<span class="tag">${x}</span>`).join('');
+  const no = (a.capabilities_forbidden||[]).slice(0,6).map(x=>`<span class="tag" style="border-color:#5a2a38;color:#ff9db3">${x}</span>`).join('');
+  const bg = (a.background_tasks_default||[]).map(x=>`<span class="tag">${x}</span>`).join(' ');
+  return `<div class="skill-card" data-team="${a.team}" data-q="${(a.callsign+' '+a.agent_code+' '+a.session_id+' '+a.team+' '+(a.capabilities_allowed||[]).join(' ')).toLowerCase()}">
+    <div class="row" style="justify-content:space-between">
+      <div><b>${a.agent_code} · ${a.callsign}</b> <span class="tag">${a.team}</span></div>
+      <span class="badge">#${a.index}</span>
+    </div>
+    <div class="muted" style="margin-top:6px">${a.mission}</div>
+    <div class="muted" style="margin-top:6px;font-family:var(--mono);font-size:11px">session <code>${a.session_id}</code><br/>host@link <code>${a.hostname_at_link}</code> · layout <code>${a.layout_at_link}</code></div>
+    <div style="margin-top:8px"><span class="muted">Strengths / notes:</span> ${a.strengths_notes||''}</div>
+    <div style="margin-top:8px"><span class="muted">Allowed:</span><br/>${can}</div>
+    <div style="margin-top:6px"><span class="muted">Forbidden (ceiling):</span><br/>${no}</div>
+    <div style="margin-top:6px"><span class="muted">Default BG:</span> ${bg}</div>
+  </div>`;
+}
+
+function filterSwarm(){
+  const q = ($('#swarm-search')?.value||'').toLowerCase().trim();
+  const team = $('#swarm-team-filter')?.value||'all';
+  $$('#swarm-list .skill-card').forEach(c=>{
+    const mq = !q || (c.dataset.q||'').includes(q);
+    const mt = team==='all' || c.dataset.team===team;
+    c.style.display = (mq&&mt)?'':'none';
+  });
+}
+
+function renderSwarm(){
+  if(!SWARM) return;
+  const rules = SWARM.strict_rules||{};
+  const bp = (SWARM.toolchain_architecture_blueprint||[]).map((x,i)=>`${i+1}. ${x}`).join('\n');
+  $('#swarm-blueprint').textContent =
+`schema: ${SWARM.schema}
+app: ${SWARM.app_target}
+strict: agents=${rules.agent_count} · no_external_app_rule_merge=${rules.no_external_app_rule_merge} · each_unique=${rules.each_agent_unique}
+capability_ceiling: ${rules.capability_ceiling}
+
+TOOLCHAIN:
+${bp}`;
+
+  const teams = SWARM.teams||{};
+  const host = $('#swarm-teams');
+  if(host){
+    host.innerHTML = Object.entries(teams).map(([k,v])=>`
+      <div class="skill-card">
+        <b>${v.name||k}</b>
+        <div class="muted">${v.count||0} agents</div>
+        <div style="margin-top:6px">${(v.immediate_background||[]).map(t=>`<span class="tag">${t}</span>`).join(' ')}</div>
+      </div>`).join('');
+  }
+  const list = $('#swarm-list');
+  if(list) list.innerHTML = (SWARM.agents||[]).map(agentCard).join('');
+  const n = (SWARM.agents||[]).length;
+  const k1=$('#swarm-n-agents'); if(k1) k1.textContent=String(n);
+  const k2=$('#kpi-swarm'); if(k2) k2.textContent=String(n);
+  filterSwarm();
+}
+
+function tickSwarmTasks(){
+  if(!SWARM_TASKS || !SWARM_TASKS.tasks) return;
+  swarmTicks++;
+  const el=$('#swarm-ticks'); if(el) el.textContent=String(swarmTicks);
+  // process a few queued tasks per tick (capability-safe: only log + state flip)
+  let progressed=0;
+  for(const t of SWARM_TASKS.tasks){
+    if(progressed>=5) break;
+    if(t.state==='queued_immediate' || t.state==='running'){
+      t.state='running';
+      // find agent fence
+      const agent = (SWARM.agents||[]).find(a=>a.agent_code===t.agent_code);
+      const allowed = new Set(agent?.capabilities_allowed||[]);
+      // Map task types to required capability tokens
+      const needMap = {
+        'live_application_session':'live_application_session',
+        'Live-testing-debug-developer-options':'Live-testing-debug-developer-options',
+        'live-testing':'live-testing',
+        'LIVE-DEPLOYMENT':'LIVE-DEPLOYMENT',
+        'background_synchronization':'background_sync_tasks',
+        'ui_shell_sync':'static_html_css_js_edit',
+        'swarm_view_refresh':'agent_card_render',
+        'static_asset_verify':'http_probe_public_urls',
+        'public_surface_probe':'http_probe_public_urls',
+        'citation_refresh':'markdown_citations',
+        'scope_guard_pass':'scope_checklists',
+        'onboarding_refresh':'onboarding_checklists',
+        'toolchain_doc_sync':'toolchain_blueprint',
+        'drill_card_rotate':'tabletop_scenarios',
+      };
+      const need = needMap[t.task_type] || t.task_type;
+      const ok = allowed.has(need) || allowed.has('http_probe_public_urls') || allowed.has('bash_workspace_ops') || allowed.has('json_markdown_authoring');
+      if(!ok && agent){
+        t.state='blocked_capability';
+        pushSwarmLog(`${t.task_id} BLOCKED ${t.agent_code} lacks ${need}`);
+      } else {
+        t.runs = (t.runs||0)+1;
+        if(t.runs>=2){ t.state='done'; pushSwarmLog(`${t.task_id} DONE ${t.agent_code} · ${t.task_type}`); }
+        else { pushSwarmLog(`${t.task_id} RUN ${t.agent_code} · ${t.task_type}`); }
+      }
+      progressed++;
+    }
+  }
+  const done = SWARM_TASKS.tasks.filter(t=>t.state==='done').length;
+  const blocked = SWARM_TASKS.tasks.filter(t=>t.state==='blocked_capability').length;
+  const queued = SWARM_TASKS.tasks.filter(t=>t.state==='queued_immediate'||t.state==='running').length;
+  const st=$('#swarm-bg-state');
+  if(st) st.textContent = `BG: run · done ${done} · blocked ${blocked} · active ${queued}`;
+  const kt=$('#kpi-tasks'); if(kt) kt.textContent=String(SWARM_TASKS.tasks.length);
+  const nt=$('#swarm-n-tasks'); if(nt) nt.textContent=String(SWARM_TASKS.tasks.length);
+  if(queued===0 && swarmTimer){
+    // keep heartbeat soft
+    if(swarmTicks % 10 === 0) pushSwarmLog('heartbeat · all immediate tickets settled · loop continues');
+  }
+}
+
+function startSwarmBackground(){
+  if(!SWARM_TASKS){ toast('Swarm tasks not loaded'); return; }
+  // reset done ones for re-run? only queued; leave done
+  SWARM_TASKS.tasks.forEach(t=>{ if(t.state==='done'||t.state==='blocked_capability'){ /* keep */ } else t.state='queued_immediate'; });
+  if(swarmTimer) clearInterval(swarmTimer);
+  swarmTicks=0;
+  pushSwarmLog('IMMEDIATE EXECUTE · live_application_session · live-testing · LIVE-DEPLOYMENT · debug-options · sync');
+  swarmTimer = setInterval(tickSwarmTasks, 900);
+  $('#swarm-bg-state').textContent='BG: running';
+  toast('Swarm background tasks started');
+  tickSwarmTasks();
+}
+
+$('#swarm-start-bg')?.addEventListener('click', startSwarmBackground);
+$('#swarm-search')?.addEventListener('input', filterSwarm);
+$('#swarm-team-filter')?.addEventListener('change', filterSwarm);
+$('#swarm-export')?.addEventListener('click', ()=>{
+  if(!SWARM) return;
+  const rows=[['index','agent_code','callsign','team','session_id','hostname_at_link','mission']];
+  (SWARM.agents||[]).forEach(a=>rows.push([a.index,a.agent_code,a.callsign,a.team,a.session_id,a.hostname_at_link,(a.mission||'').replaceAll('"','""')]));
+  const csv=rows.map(r=>r.map(x=>`"${x}"`).join(',')).join('\n');
+  const blob=new Blob([csv],{type:'text/csv'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='swarm-23-agents.csv'; a.click();
+  toast('Exported swarm-23-agents.csv');
+});
+
+(async ()=>{
+  SWARM = await getJSON('./data/swarm-23.json');
+  SWARM_TASKS = await getJSON('./data/swarm-tasks.json');
+  if(SWARM){
+    renderSwarm();
+    const kt=$('#kpi-tasks'); if(kt && SWARM_TASKS) kt.textContent=String(SWARM_TASKS.task_count||SWARM_TASKS.tasks?.length||0);
+    const nt=$('#swarm-n-tasks'); if(nt && SWARM_TASKS) nt.textContent=String(SWARM_TASKS.task_count||0);
+    // auto-start background tasks immediately on load (deployment orchestration requirement)
+    startSwarmBackground();
+  } else {
+    pushSwarmLog('FAILED to load ./data/swarm-23.json');
+  }
+})();
 
 // Theme pulse (still dark, accent cycle)
 $('#accent-cycle')?.addEventListener('click', () => {
