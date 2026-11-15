@@ -1,22 +1,49 @@
 {
-  "run_id": "autonomous-v3-complete",
-  "timestamp": "2026-11-15T22:07:56.494368+00:00",
+  "run_id": "autonomous-v3-claimed",
+  "timestamp": "2026-11-15T22:25:21.572473+00:00",
   "commit": "7730c973912a73b6da1afd9dffc0b75c58121369",
-  "typecheck": "PASS",
-  "build": "static-echo",
-  "audit": "PASS",
+  "status": "CLAIMED_LIVE_VERIFIED",
+  "claimed_url": "https://quick-flint-bwduwwz.tmp.now",
+  "legacy_production": "https://master-run-command-center.vercel.app/",
+  "legacy_note": "Still serving pre-v3 build; domain alias not yet pointed at claimed deployment (MCP 403 on team project)",
+  "smoke": {
+    "/": {
+      "status": 200,
+      "bytes": 53818
+    },
+    "/data/health.json": {
+      "status": 200,
+      "bytes": 519
+    },
+    "/api/health": {
+      "status": 200,
+      "bytes": 519
+    },
+    "/data/skills.json": {
+      "status": 200,
+      "bytes": 9102
+    },
+    "/data/swarm-23.json": {
+      "status": 200,
+      "bytes": 35063
+    },
+    "/data/DEBUG_OPTS_CATALOGUE.json": {
+      "status": 200,
+      "bytes": 807
+    }
+  },
+  "markers": {
+    "learning_tab": true,
+    "swarm_tab": true,
+    "build_stamp": true,
+    "size": 53587
+  },
   "agents": 23,
   "skills_distilled": {
     "custom": 9,
     "bundled": 10,
     "debug_opts": 19
   },
-  "deployments": {
-    "github_main": "https://github.com/cantgetalonggta-png/master-run-command-center/commit/7730c973912a73b6da1afd9dffc0b75c58121369",
-    "vercel_temporary": "https://quick-flint-bwduwwz.tmp.now",
-    "vercel_claim": "https://vercel.com/claim-deployment?code=35aa1565-4100-44f4-9154-204b0e76963c",
-    "vercel_production_existing": "https://master-run-command-center.vercel.app/",
-    "note": "Production Vercel project exists but MCP/CLI lacks deploy permission (403). Claim temporary or reconnect Git integration to promote v3. Code is on main."
-  },
-  "status": "CODE_SHIPPED_TEMP_LIVE_PROD_NEEDS_CLAIM_OR_TOKEN"
+  "audit": "PASS",
+  "primary_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
 }

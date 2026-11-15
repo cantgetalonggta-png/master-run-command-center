@@ -1,19 +1,42 @@
-# Deploy Notes — Autonomous v3
-Updated: 2026-11-15T22:07:56.494368+00:00
+# Deploy Notes — CLAIMED LIVE
+Updated: 2026-11-15T22:25:21.572473+00:00
 
-## Shipped
-- GitHub main @ `7730c973` — full v3 frontend + distilled skills + Learning-Center + health API
-- Temporary Vercel (59m claim window): https://quick-flint-bwduwwz.tmp.now
-- Claim permanent: https://vercel.com/claim-deployment?code=35aa1565-4100-44f4-9154-204b0e76963c
+## Claimed deployment (v3) — VERIFIED
+**URL:** https://quick-flint-bwduwwz.tmp.now
 
-## Production domain
-Existing production https://master-run-command-center.vercel.app/ still serves prior build.
-**Blocker:** Vercel MCP/CLI returns 403 create-deployment / create-project for team `echo-ec69`.
-**Unblock:** Claim the temporary deployment above OR re-link GitHub repo in Vercel dashboard and redeploy main, OR provide VERCEL_TOKEN with deploy scope.
+Smoke:
+{
+  "/": {
+    "status": 200,
+    "bytes": 53818
+  },
+  "/data/health.json": {
+    "status": 200,
+    "bytes": 519
+  },
+  "/api/health": {
+    "status": 200,
+    "bytes": 519
+  },
+  "/data/skills.json": {
+    "status": 200,
+    "bytes": 9102
+  },
+  "/data/swarm-23.json": {
+    "status": 200,
+    "bytes": 35063
+  },
+  "/data/DEBUG_OPTS_CATALOGUE.json": {
+    "status": 200,
+    "bytes": 807
+  }
+}
 
-## Verified on temp
-- Learning + Swarm-23 tabs
-- /api/health 200
-- /data/skills.json 9 custom skills
-- 23 agents in swarm-23.json
-- Full security headers (CSP, HSTS, XFO, nosniff, Permissions-Policy)
+Markers: {"learning_tab": true, "swarm_tab": true, "build_stamp": true, "size": 53587}
+
+## Modules live
+Overview · Skills · Swarm-23 · Learning-Center · GitHub · Media · Research · Telemetry · Health · Deploy
+
+## Next optional (dashboard only)
+Point production domain `master-run-command-center.vercel.app` at this project, or assign a custom domain.
+MCP cannot mutate the old team project (403). GitHub main already has full source.
