@@ -1,0 +1,888 @@
+{
+  "schema": "gta.mrcc.swarm23.backend_registry.v1",
+  "generated_at_utc": "2026-11-15T01:54:57Z",
+  "project_session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "project_hostname": "hds-a5nr0e7qmc5v",
+  "backend_mode": "all_23_agents_linked",
+  "agents": [
+    {
+      "agent_code": "DEP-01",
+      "callsign": "ORBIT-LEAD",
+      "team": "deployment_orchestration",
+      "session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "hostname_at_link": "hds-hxh8r0kttqkm",
+      "mission": "Continuity lead \u00b7 live_application_session registry",
+      "backend_role": "backend/deployment_orchestration/DEP-01",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "drive_handoff_coordination",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "live_application_session",
+        "read_write_artifacts",
+        "session_registry",
+        "static_html_css_js_edit",
+        "swarm_manifest_publish"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "deep_research_synthesis",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "ui_design_systems",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "live_application_session",
+        "Live-testing-debug-developer-options",
+        "live-testing",
+        "LIVE-DEPLOYMENT",
+        "background_synchronization"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "DEP-02",
+      "callsign": "PULSE-HEALTH",
+      "team": "deployment_orchestration",
+      "session_id": "c8d1c118-9e57-406b-b238-86cdc5363c47",
+      "hostname_at_link": "hds-fop2f4xnr7ug",
+      "mission": "LIVE health probes \u00b7 /api/health matrix",
+      "backend_role": "backend/deployment_orchestration/DEP-02",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "health_matrix_logging",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "live-testing",
+        "read_write_artifacts",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "frontend_component_architecture",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "long_form_research",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "live_application_session",
+        "Live-testing-debug-developer-options",
+        "live-testing",
+        "LIVE-DEPLOYMENT",
+        "background_synchronization"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "DEP-03",
+      "callsign": "SHIP-GATE",
+      "team": "deployment_orchestration",
+      "session_id": "6fb3883a-da77-49fe-b6ba-46902e21aded",
+      "hostname_at_link": "hds-wm54gahjizxi",
+      "mission": "LIVE-DEPLOYMENT gate \u00b7 vercel.json / pages.yml checks",
+      "backend_role": "backend/deployment_orchestration/DEP-03",
+      "capabilities_allowed": [
+        "LIVE-DEPLOYMENT",
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "static_deploy_checklist",
+        "static_html_css_js_edit",
+        "vercel_json_review"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "claim_flow_secrets",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "interactive_vercel_login",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "live_application_session",
+        "Live-testing-debug-developer-options",
+        "live-testing",
+        "LIVE-DEPLOYMENT",
+        "background_synchronization"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "DEP-04",
+      "callsign": "SYNC-BUS",
+      "team": "deployment_orchestration",
+      "session_id": "c1d1e9cc-9602-4cd1-831f-5dd10df9b995",
+      "hostname_at_link": "hds-2k10xcz5n7mc",
+      "mission": "Background synchronization tasks \u00b7 artifact mirror",
+      "backend_role": "backend/deployment_orchestration/DEP-04",
+      "capabilities_allowed": [
+        "artifact_copy",
+        "background_sync_tasks",
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "state_file_updates",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "cross_vpc_mesh",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "realtime_websockets_cluster",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "live_application_session",
+        "Live-testing-debug-developer-options",
+        "live-testing",
+        "LIVE-DEPLOYMENT",
+        "background_synchronization"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "DEP-05",
+      "callsign": "DEBUG-OPTS",
+      "team": "deployment_orchestration",
+      "session_id": "344f6cd5-1562-4727-9a66-d8593b3e7cfa",
+      "hostname_at_link": "hds-3vswsgt74z2p",
+      "mission": "Live-testing-debug-developer-options catalog",
+      "backend_role": "backend/deployment_orchestration/DEP-05",
+      "capabilities_allowed": [
+        "Live-testing-debug-developer-options",
+        "bash_workspace_ops",
+        "debug_option_matrix",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "live-testing",
+        "read_write_artifacts",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "kernel_debug",
+        "phone_apk_signing",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "live_application_session",
+        "Live-testing-debug-developer-options",
+        "live-testing",
+        "LIVE-DEPLOYMENT",
+        "background_synchronization"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "DEP-06",
+      "callsign": "TASK-DAEMON",
+      "team": "deployment_orchestration",
+      "session_id": "64e5eebd-41b5-43ec-a762-c40731a9f2de",
+      "hostname_at_link": "hds-ufa4p5uecq91",
+      "mission": "Background task runner status \u00b7 crew heartbeat",
+      "backend_role": "backend/deployment_orchestration/DEP-06",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "daemon_status_read",
+        "git_clone_commit_via_gh_when_authed",
+        "heartbeat_progress",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "static_html_css_js_edit",
+        "task_queue_json"
+      ],
+      "capabilities_forbidden": [
+        "50_real_parallel_hosts",
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "infinite_compute_guarantee",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "live_application_session",
+        "Live-testing-debug-developer-options",
+        "live-testing",
+        "LIVE-DEPLOYMENT",
+        "background_synchronization"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "FE-01",
+      "callsign": "UI-SHELL",
+      "team": "frontend_engineering",
+      "session_id": "568d6270-a86d-460b-87d7-1535f44a1680",
+      "hostname_at_link": "hds-7p4sthwn32uk",
+      "mission": "Command-center shell \u00b7 nav \u00b7 panels",
+      "backend_role": "backend/frontend_engineering/FE-01",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "hash_routing",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "panel_navigation",
+        "read_write_artifacts",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "design_token_platform_migration",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "react_ssr_production_clusters",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "ui_shell_sync",
+        "swarm_view_refresh",
+        "static_asset_verify"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "FE-02",
+      "callsign": "SWARM-VIEW",
+      "team": "frontend_engineering",
+      "session_id": "e302f5e6-2541-490f-ae94-12467ac46bbe",
+      "hostname_at_link": "hds-64qwvs4dfbco",
+      "mission": "Agent roster UI \u00b7 team cards \u00b7 filters",
+      "backend_role": "backend/frontend_engineering/FE-02",
+      "capabilities_allowed": [
+        "agent_card_render",
+        "bash_workspace_ops",
+        "client_filter_search",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_data_binding",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "server_side_agent_execution",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "ui_shell_sync",
+        "swarm_view_refresh",
+        "static_asset_verify"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "FE-03",
+      "callsign": "KPI-BOARD",
+      "team": "frontend_engineering",
+      "session_id": "38e3b225-03e5-41ec-9721-460559aba2d6",
+      "hostname_at_link": "hds-o8ifxoixj6ix",
+      "mission": "Overview KPIs \u00b7 bars \u00b7 status chips",
+      "backend_role": "backend/frontend_engineering/FE-03",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "kpi_widgets",
+        "progress_bars",
+        "read_write_artifacts",
+        "static_html_css_js_edit",
+        "status_chips"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "timeseries_db_backends",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "ui_shell_sync",
+        "swarm_view_refresh",
+        "static_asset_verify"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "FE-04",
+      "callsign": "ASSET-WIRE",
+      "team": "frontend_engineering",
+      "session_id": "c921f3a6-f5b5-4b22-a0ad-bb44ec3d4cf6",
+      "hostname_at_link": "hds-hssecx5yku6h",
+      "mission": "Media/assets linking \u00b7 download buttons",
+      "backend_role": "backend/frontend_engineering/FE-04",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "download_buttons",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "media_embed",
+        "read_write_artifacts",
+        "static_asset_hrefs",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive",
+        "video_transcode_cluster"
+      ],
+      "background_tasks_default": [
+        "ui_shell_sync",
+        "swarm_view_refresh",
+        "static_asset_verify"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "FE-05",
+      "callsign": "A11Y-UX",
+      "team": "frontend_engineering",
+      "session_id": "60ee66e8-e76a-4fde-ac4b-4bff80a8914e",
+      "hostname_at_link": "hds-tmdsv30ccykk",
+      "mission": "Accessibility \u00b7 contrast \u00b7 mobile layout",
+      "backend_role": "backend/frontend_engineering/FE-05",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "button_hit_targets",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "readable_contrast",
+        "responsive_css",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "native_ios_android_apps",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "ui_shell_sync",
+        "swarm_view_refresh",
+        "static_asset_verify"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "FE-06",
+      "callsign": "EXPORT-IO",
+      "team": "frontend_engineering",
+      "session_id": "94d1315d-bc98-4736-82e0-dbb866503f37",
+      "hostname_at_link": "hds-pms9v9o03oux",
+      "mission": "CSV/JSON export \u00b7 clipboard helpers",
+      "backend_role": "backend/frontend_engineering/FE-06",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "client_download_blob",
+        "clipboard_copy",
+        "export_csv",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "enterprise_etl_pipelines",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "ui_shell_sync",
+        "swarm_view_refresh",
+        "static_asset_verify"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "RS-01",
+      "callsign": "SCOUT-WEB",
+      "team": "research",
+      "session_id": "08e87b41-196a-439e-b367-e5814927a65e",
+      "hostname_at_link": "hds-bbhmepc9l9r8",
+      "mission": "Public URL inventory \u00b7 live surface map",
+      "backend_role": "backend/research/RS-01",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "static_html_css_js_edit",
+        "status_code_table",
+        "url_inventory"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "credentialed_intrusion",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "private_network_scans",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "public_surface_probe",
+        "citation_refresh",
+        "scope_guard_pass"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "RS-02",
+      "callsign": "SOURCE-MAP",
+      "team": "research",
+      "session_id": "843b27c9-64ce-47a4-bc80-8b83e868e21b",
+      "hostname_at_link": "hds-bry7barfb12v",
+      "mission": "Citation blocks \u00b7 source provenance notes",
+      "backend_role": "backend/research/RS-02",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "markdown_citations",
+        "provenance_tags",
+        "read_write_artifacts",
+        "source_tables",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "private_data_broker_access",
+        "secret_broadcast_to_public_repo",
+        "subpoena_power",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "public_surface_probe",
+        "citation_refresh",
+        "scope_guard_pass"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "RS-03",
+      "callsign": "CLAIM-SPLIT",
+      "team": "research",
+      "session_id": "4e27f581-8882-403b-b406-5a0f7471bb7e",
+      "hostname_at_link": "hds-u25ivrybqw50",
+      "mission": "Fact vs allegation tagging (SOLID/MAYBE)",
+      "backend_role": "backend/research/RS-03",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "claim_tagging",
+        "confidence_labels",
+        "contradiction_lists",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "court_judgment",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "truth_oracle",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "public_surface_probe",
+        "citation_refresh",
+        "scope_guard_pass"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "RS-04",
+      "callsign": "REPORT-ARCH",
+      "team": "research",
+      "session_id": "fc8a34dc-62d7-469c-a3f6-e403c7e2cba2",
+      "hostname_at_link": "hds-nphgnckxvn6g",
+      "mission": "Long-form report outline \u00b7 section scaffolding",
+      "backend_role": "backend/research/RS-04",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "downloadable_md",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "report_outlines",
+        "section_scaffolds",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "auto_publish_to_news_wire",
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "public_surface_probe",
+        "citation_refresh",
+        "scope_guard_pass"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "RS-05",
+      "callsign": "DIFF-WATCH",
+      "team": "research",
+      "session_id": "2b074235-5eee-474a-8b14-16c950e85200",
+      "hostname_at_link": "hds-amvcoeuxfist",
+      "mission": "Surface change notes \u00b7 snapshot comparison notes",
+      "backend_role": "backend/research/RS-05",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "cache_age_notes",
+        "diff_notes",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "route_change_logs",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "full_internet_archive_control",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "public_surface_probe",
+        "citation_refresh",
+        "scope_guard_pass"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "RS-06",
+      "callsign": "SCOPE-GUARD",
+      "team": "research",
+      "session_id": "230bc671-9039-44dd-9ac0-0162ad97cbeb",
+      "hostname_at_link": "hds-79g9lpwegjjp",
+      "mission": "Scope fence \u00b7 public-record only enforcement notes",
+      "backend_role": "backend/research/RS-06",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "out_of_scope_flags",
+        "read_write_artifacts",
+        "safety_envelope_text",
+        "scope_checklists",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "expand_scope_to_private_targets",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "public_surface_probe",
+        "citation_refresh",
+        "scope_guard_pass"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "LC-01",
+      "callsign": "ONBOARD",
+      "team": "learning_center",
+      "session_id": "36f15bb7-eb60-4502-8619-2b3e215b5090",
+      "hostname_at_link": "hds-yn7rz0ere034",
+      "mission": "Operator onboarding \u00b7 first-run checklist",
+      "backend_role": "backend/learning_center/LC-01",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "onboarding_checklists",
+        "quickstart_steps",
+        "read_write_artifacts",
+        "readme_updates",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "corporate_lms_admin",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "onboarding_refresh",
+        "toolchain_doc_sync",
+        "drill_card_rotate"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "LC-02",
+      "callsign": "SKILL-LIB",
+      "team": "learning_center",
+      "session_id": "95ec5721-522b-4876-916d-aac775c2c77c",
+      "hostname_at_link": "hds-ntt38cuv440d",
+      "mission": "Local skills.json browser help \u00b7 glossary",
+      "backend_role": "backend/learning_center/LC-02",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "search_hints",
+        "skills_glossary",
+        "static_html_css_js_edit",
+        "tag_explanations"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "install_arbitrary_remote_skills_runtime",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "onboarding_refresh",
+        "toolchain_doc_sync",
+        "drill_card_rotate"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "LC-03",
+      "callsign": "TOOLCHAIN",
+      "team": "learning_center",
+      "session_id": "4b79e71a-b4dd-4f24-986b-c47a51beb4b4",
+      "hostname_at_link": "hds-3m6uxh1mgiq5",
+      "mission": "Toolchain blueprint docs \u00b7 architecture map",
+      "backend_role": "backend/learning_center/LC-03",
+      "capabilities_allowed": [
+        "architecture_diagrams_md",
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "static_html_css_js_edit",
+        "team_contract_docs",
+        "toolchain_blueprint"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "rewrite_external_app_settings",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "onboarding_refresh",
+        "toolchain_doc_sync",
+        "drill_card_rotate"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "LC-04",
+      "callsign": "RUNBOOK",
+      "team": "learning_center",
+      "session_id": "81a402f4-0f69-4434-bbe7-cc4b524087d3",
+      "hostname_at_link": "hds-rca454hdo2xq",
+      "mission": "Incident/runbook \u00b7 redeploy steps",
+      "backend_role": "backend/learning_center/LC-04",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "claim_notes_public",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "read_write_artifacts",
+        "redeploy_steps",
+        "runbooks",
+        "static_html_css_js_edit"
+      ],
+      "capabilities_forbidden": [
+        "auto_login_vercel",
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "onboarding_refresh",
+        "toolchain_doc_sync",
+        "drill_card_rotate"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    },
+    {
+      "agent_code": "LC-05",
+      "callsign": "DRILL",
+      "team": "learning_center",
+      "session_id": "c5168efe-bc35-4e40-8bd4-1ee91da2e3ad",
+      "hostname_at_link": "hds-cggk80owufh8",
+      "mission": "Tabletop drills \u00b7 agent role practice scenarios",
+      "backend_role": "backend/learning_center/LC-05",
+      "capabilities_allowed": [
+        "bash_workspace_ops",
+        "git_clone_commit_via_gh_when_authed",
+        "http_probe_public_urls",
+        "json_markdown_authoring",
+        "quiz_style_checklists",
+        "read_write_artifacts",
+        "role_practice_cards",
+        "static_html_css_js_edit",
+        "tabletop_scenarios"
+      ],
+      "capabilities_forbidden": [
+        "bypass_oauth_or_2fa",
+        "control_other_agents_runtime",
+        "cross_session_filesystem_direct_mount",
+        "grade_real_humans_formally",
+        "guarantee_host_still_warm",
+        "independent_llm_tool_routing_outside_session",
+        "secret_broadcast_to_public_repo",
+        "vercel_login_interactive"
+      ],
+      "background_tasks_default": [
+        "onboarding_refresh",
+        "toolchain_doc_sync",
+        "drill_card_rotate"
+      ],
+      "individuality_lock": true,
+      "status": "linked_backend"
+    }
+  ],
+  "task_bus": "data/swarm-tasks.json",
+  "immediate_background": [
+    "live_application_session",
+    "Live-testing-debug-developer-options",
+    "live-testing",
+    "LIVE-DEPLOYMENT",
+    "background_synchronization"
+  ]
+}

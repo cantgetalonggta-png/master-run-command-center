@@ -34,3 +34,8 @@ npm install failed with EPERM symlink on grok-files FUSE; dashboard uses pure st
 - Data: `data/swarm-23.json` · `data/swarm-tasks.json`
 - UI: `#swarm` panel · auto-starts background task bus on load
 - Capability fences enforced per agent (blocked if task needs forbidden capability)
+
+## Backend bind (session project)
+- `data/BACKEND_REGISTRY_23.json` — all 23 agents linked as backend to continuity session
+- Drive folder: Swarm23-Backend-Session-Merge under Multi-Model Master Workspace
+- Merge schema: gta.grok.session_merge.v2
