@@ -1,0 +1,29 @@
+{
+  "task_name": "future-session-merge-v3",
+  "description": "Idempotent multi-pass future session merge with flock lock, atomic checkpoint, health probes, and SwarmOrchestrationEngine dispatch",
+  "triggers": ["on-demand", "once", "loop (5 passes)", "status", "rollback"],
+  "entry_points": {
+    "shell": "bash /workspace/artifacts/pipelines/future_session_merge_v3.sh once|loop|status|rollback",
+    "python": "python3 /workspace/artifacts/pipelines/swarm_orchestration_engine.py"
+  },
+  "runtime": "bash + python3",
+  "dependencies": ["python3", "flock", "openssl/ssl stdlib", "local swarm-23.json"],
+  "idempotency": "flock lock file /tmp/future-session-merge-v3.lock; atomic mv checkpoint; overwrite checkpoint by pass_num",
+  "schedule": "on-demand or external Automations RRULE when operator creates automation",
+  "retry": "loop 5 passes; soft-fail if swarm missing logs ERROR and still checkpoints",
+  "timeout_hint_seconds": 120,
+  "secrets_policy": "KEY NAMES ONLY; redact_secrets ALWAYS; no HF_TOKEN values",
+  "observability": {
+    "logs": "/workspace/artifacts/audits/future-session-merge-v3.jsonl",
+    "metrics_files": ["state/health_probe.json", "state/last_run_checkpoint.json"],
+    "success_exit": 0
+  },
+  "rollback": "bash .../future_session_merge_v3.sh rollback",
+  "validation_plan": [
+    "bash pipelines/future_session_merge_v3.sh once",
+    "bash pipelines/future_session_merge_v3.sh status | jq .status",
+    "python3 pipelines/swarm_orchestration_engine.py | jq .status",
+    "test -f state/last_run_checkpoint.json",
+    "health ok_count >= 3"
+  ]
+}
