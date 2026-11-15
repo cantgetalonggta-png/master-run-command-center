@@ -1,1 +1,12 @@
-{"schema":"gta.ma23.deploy_run_v2","repo":"https://github.com/cantgetalonggta-png/multi-agent-23-hivemind","typecheck":"pass","build":"pass","dev_mode":"/dev","xai_credits":"blocked spending-limit"}
+{
+  "schema": "gta.ma23.deploy_run_v2",
+  "repo": "https://github.com/cantgetalonggta-png/master-run-command-center",
+  "typecheck": "pass",
+  "build": "pass-static",
+  "dev_mode": "/dev npm run dev",
+  "headers": "pass-verify_headers.py",
+  "framework_doc": "docs/IMPLEMENTATION_FRAMEWORK_FRONTEND_DEPLOYMENT.md",
+  "deploy_panel": "index.html#deploy",
+  "updated_at_utc": "2026-11-15T13:10:00Z",
+  "xai_credits": "n/a"
+}

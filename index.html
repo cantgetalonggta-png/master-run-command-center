@@ -26,6 +26,7 @@ header{position:sticky;top:0;z-index:40;backdrop-filter:blur(14px);background:rg
 .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#1f6,#2af);display:grid;place-items:center;color:#04120a;font-weight:900;box-shadow:var(--shadow)}
 .badge{font-size:11px;padding:3px 8px;border-radius:999px;border:1px solid var(--border);color:var(--muted);font-weight:600}
 nav{display:flex;gap:6px;flex-wrap:wrap}
+/* deploy enhanced */
 nav button, .btn{
   background:var(--panel2);color:var(--text);border:1px solid var(--border);
   border-radius:999px;padding:8px 12px;cursor:pointer;font-weight:650;font-size:12.5px
@@ -84,7 +85,7 @@ th{color:var(--muted);font-weight:650}
     <button data-tab="health">Health</button>
     <button data-tab="swarm">Swarm-23</button>
     <button data-tab="deploy">Deploy</button>
-  </nav>
+  <button type="button" data-mod="deploy" class="navbtn">Deploy</button></nav>
 </header>
 <main>
 <section id="overview" class="panel active">
@@ -342,6 +343,36 @@ th{color:var(--muted);font-weight:650}
 </section>
 
 <p class="footer">Master-Run Command Center · distilled from Grok Computer session artifacts · not a bulk executor of documentation-only skills</p>
+
+<section id="mod-deploy" class="panel" hidden>
+  <h2>Frontend Deployment Control</h2>
+  <p class="muted">Production headers, audit scripts, health probes, and framework docs. Secrets: names only.</p>
+  <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+    <div class="card" style="background:var(--panel2);border:1px solid var(--border);border-radius:var(--radius);padding:14px">
+      <h3>Audit</h3>
+      <p id="deploy-audit">Run <code>npm run audit</code> / <code>npm run check:headers</code></p>
+      <button type="button" class="btn" id="btn-reload-status">Reload status.md</button>
+    </div>
+    <div class="card" style="background:var(--panel2);border:1px solid var(--border);border-radius:var(--radius);padding:14px">
+      <h3>Security headers</h3>
+      <ul id="deploy-headers" style="font-size:12px;color:var(--muted)">
+        <li>X-Content-Type-Options</li><li>CSP</li><li>HSTS</li><li>X-Frame-Options</li><li>Referrer-Policy</li>
+      </ul>
+    </div>
+    <div class="card" style="background:var(--panel2);border:1px solid var(--border);border-radius:var(--radius);padding:14px">
+      <h3>Live health</h3>
+      <button type="button" class="btn" id="btn-health-probe">Probe live surfaces</button>
+      <pre id="health-out" style="font-size:11px;white-space:pre-wrap;max-height:180px;overflow:auto"></pre>
+    </div>
+    <div class="card" style="background:var(--panel2);border:1px solid var(--border);border-radius:var(--radius);padding:14px">
+      <h3>Framework</h3>
+      <a class="btn" href="docs/IMPLEMENTATION_FRAMEWORK_FRONTEND_DEPLOYMENT.md" target="_blank" rel="noopener">Open Implementation Framework</a>
+      <p class="muted" style="margin-top:8px">vercel.json + package.json + scripts/verify_headers.py</p>
+    </div>
+  </div>
+  <h3 style="margin-top:18px">Deploy notes</h3>
+  <pre id="deploy-notes" style="background:var(--panel);border:1px solid var(--border);padding:12px;border-radius:10px;overflow:auto;max-height:220px"></pre>
+</section>
 </main>
 <div class="toast" id="toast"></div>
 <script>
