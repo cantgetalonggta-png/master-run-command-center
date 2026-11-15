@@ -1,0 +1,13 @@
+# Supervisory Isolation — never ship secrets
+.env
+.env.*
+*.pem
+*.key
+keys.txt
+live_keys.txt
+all_keys.txt
+god_tier_keys.txt
+supervisor_state.json
+.git/
+node_modules/
+.vercel/
