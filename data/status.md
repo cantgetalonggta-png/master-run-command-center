@@ -1,41 +1,33 @@
-# Master-Run STATUS
-
-## Phases
-| Phase | Status | Key outputs |
-|-------|--------|-------------|
-| 1 Skills + TaskFlow | DONE | `01-skills-inventory.md/json`, `taskflow.log`, monitor PID |
-| 2 GitHub audit/fix | DONE | draft PR https://github.com/cantgetalonggta-png/grok-command-center/pull/1 , `02-github-audit.md` |
-| 3 Media | DONE | `03-media/sample-clip.mp4`, frames, contact-sheet, transcript |
-| 4 Research | DONE | `04-research/master-report.md` (~9917 words), `04-master-report.pdf`, `04-master-report.docx` |
-| 5 Dashboard | DONE | Vite scaffold + static `dist/` served on **:5173** (npm symlink blocked on grok-files; static fallback) |
-
-## Auto-selected targets
-- **Repo:** cantgetalonggta-png/grok-command-center
-- **Research:** Grok Computer isolation / skill orchestration / max-out under 1.9 GiB
-- **Media:** synthetic sample (no user path)
-
-## Live server
-- Local: `http://127.0.0.1:5173/`
-- Preview proxy ports: 6014/6015 (product maps wildcard `*.grok-computer-wild.hades-www`)
-- PID file: `logs/dashboard-server.pid`
-
-## Owner follow-ups
-1. Enable GitHub Pages (Actions) then merge PR #1
-2. Provide real media path + OPENAI_API_KEY for Whisper
-3. Say **finish** / **complete** when satisfied, or supply overrides
-
-## Memory note
-npm install failed with EPERM symlink on grok-files FUSE; dashboard uses pure static dist + python http.server.
-
-
-## Swarm-23 (this app only)
-- Agents: 23 unique session workers (no external app rule merge)
-- Teams: deployment_orchestration (6) · frontend_engineering (6) · research (6) · learning_center (5)
-- Data: `data/swarm-23.json` · `data/swarm-tasks.json`
-- UI: `#swarm` panel · auto-starts background task bus on load
-- Capability fences enforced per agent (blocked if task needs forbidden capability)
-
-## Backend bind (session project)
-- `data/BACKEND_REGISTRY_23.json` — all 23 agents linked as backend to continuity session
-- Drive folder: Swarm23-Backend-Session-Merge under Multi-Model Master Workspace
-- Merge schema: gta.grok.session_merge.v2
+# FUTURE SESSION MERGE REPORT
+- UTC: 2026-11-15T02:14:38Z
+- Status: MERGE_OK
+- Confirm: MERGE_COMPLETE_FUTURE_SESSION
+- schema: gta.grok.future_session_merge.v3
+- this_session: 0f580453-d172-5750-98d8-27882a28b09d
+- hostname: hds-gfd4qjr5y29c
+- primary_continuity_session_id: 211e2cba-1b23-5ce8-945a-d5e158b037a2
+- chain_len: 31 (was 30)
+- unique_sessions: 24
+- swarm_backend_agents: 23 / 23
+- is_sandbox_selectable: on
+- apps_linked: 22
+- Project: Multi-Model Master Workspace · Swarm23 Backend Session
+- Live: https://master-run-command-center.vercel.app/#swarm
+- Fleet: https://fleet-ochre-auyuksg.tmp.now/
+- Strand: https://strand-osint-mesh.vercel.app/
+- Skill Vault: https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/
+- GitHub: https://github.com/cantgetalonggta-png/master-run-command-center
+- Drive merge folder: https://drive.google.com/drive/folders/1JdE9pm9jVDdeN6jtnjJYg93Kex5mHquA
+- Drive master workspace: https://drive.google.com/drive/folders/1F4IbkCnlIkuqUVwbMFqu1dtAgzMu56Mk
+- Secrets: names only — NEVER values
+  - POLYGON_API_KEY, COINGECKO_PRO_API_KEY, GROK_SERVER_KEY, TERMINAL_JWT_VAL
+  - GROVE_TOKEN_ROTATION, GPG_KEY, VERCEL_TOKEN, GITHUB_TOKEN
+- Files:
+  - archives/NEW_SESSION_AUDIT.json
+  - archives/APK_DEEPLINK_AUDIT_DASHBOARD_v1.json
+  - archives/APK_DEEPLINK_AUDIT_DASHBOARD_v1.min.json
+  - archives/PROJECT_SESSION_MERGE_v1.json
+  - swarm23/BACKEND_REGISTRY_23.json
+  - swarm23/swarm-23.json
+  - FUTURE_SESSION_MERGE_REPORT.md
+- Hard rules honored: single-shot, redact_secrets, no_external_app_rule_merge, keep_agent_individuality, implement_stack, STOP after confirm

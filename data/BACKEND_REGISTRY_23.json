@@ -1,8 +1,8 @@
 {
   "schema": "gta.mrcc.swarm23.backend_registry.v1",
-  "generated_at_utc": "2026-11-15T01:54:57Z",
-  "project_session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
-  "project_hostname": "hds-a5nr0e7qmc5v",
+  "generated_at_utc": "2026-11-15T02:14:38Z",
+  "project_session_id": "0f580453-d172-5750-98d8-27882a28b09d",
+  "project_hostname": "hds-gfd4qjr5y29c",
   "backend_mode": "all_23_agents_linked",
   "agents": [
     {
