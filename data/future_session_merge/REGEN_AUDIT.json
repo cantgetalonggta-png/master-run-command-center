@@ -1,0 +1,190 @@
+{
+  "ts": "2026-11-15T12:43:38.518669Z",
+  "schema": "gta.grok.future_session_merge.v3",
+  "mode": "single-shot",
+  "flags": {
+    "is_sandbox_selectable": true,
+    "redact_secrets": "ALWAYS",
+    "no_external_app_rule_merge": true,
+    "keep_agent_individuality": true,
+    "swarm_agent_limit": 23,
+    "implement_stack": true,
+    "audit_new_session": true
+  },
+  "primary_continuity_session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "host": "hds-pojwt21ycfo9",
+  "environment_id": "app-builder-skills",
+  "agent_count": 23,
+  "teams": {
+    "deployment_orchestration": {
+      "name": "Deployment Orchestration Framework",
+      "immediate_background": [
+        "live_application_session",
+        "Live-testing-debug-developer-options",
+        "live-testing",
+        "LIVE-DEPLOYMENT",
+        "background_synchronization"
+      ],
+      "count": 6
+    },
+    "frontend_engineering": {
+      "name": "Frontend Engineering Team",
+      "immediate_background": [
+        "ui_shell_sync",
+        "swarm_view_refresh",
+        "static_asset_verify"
+      ],
+      "count": 6
+    },
+    "research": {
+      "name": "Research Team",
+      "immediate_background": [
+        "public_surface_probe",
+        "citation_refresh",
+        "scope_guard_pass"
+      ],
+      "count": 6
+    },
+    "learning_center": {
+      "name": "Learning-Center Team",
+      "immediate_background": [
+        "onboarding_refresh",
+        "toolchain_doc_sync",
+        "drill_card_rotate"
+      ],
+      "count": 5
+    }
+  },
+  "strict_rules": {
+    "agent_count": 23,
+    "no_external_app_rule_merge": true,
+    "each_agent_unique": true,
+    "capability_ceiling": "Hades remote session worker envelope only",
+    "no_secret_values_in_manifest": true
+  },
+  "sources_loaded": {
+    "drive_audit": true,
+    "drive_merge": true,
+    "drive_backend": true,
+    "drive_swarm": true,
+    "protocol": true,
+    "github_swarm": true,
+    "github_backend": true,
+    "local_apk": false,
+    "forge_profile": true,
+    "heretic_audit": true
+  },
+  "bound_surface_probes": {
+    "swarm": {
+      "url": "https://master-run-command-center.vercel.app/#swarm",
+      "http_url": "https://master-run-command-center.vercel.app/",
+      "status": 200,
+      "ms": 48,
+      "content_type": "text/html; charset=utf-8",
+      "ok": true,
+      "bytes_sample": 800
+    },
+    "swarm_root": {
+      "url": "https://master-run-command-center.vercel.app/",
+      "http_url": "https://master-run-command-center.vercel.app/",
+      "status": 200,
+      "ms": 29,
+      "content_type": "text/html; charset=utf-8",
+      "ok": true,
+      "bytes_sample": 800
+    },
+    "fleet": {
+      "url": "https://fleet-ochre-auyuksg.tmp.now/",
+      "http_url": "https://fleet-ochre-auyuksg.tmp.now/",
+      "status": 200,
+      "ms": 76,
+      "content_type": "text/html; charset=utf-8",
+      "ok": true,
+      "bytes_sample": 800
+    },
+    "strand": {
+      "url": "https://strand-osint-mesh.vercel.app/",
+      "http_url": "https://strand-osint-mesh.vercel.app/",
+      "status": 200,
+      "ms": 865,
+      "content_type": "text/html; charset=utf-8",
+      "ok": true,
+      "bytes_sample": 800
+    },
+    "skill_vault": {
+      "url": "https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/",
+      "http_url": "https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/",
+      "status": 200,
+      "ms": 47,
+      "content_type": "text/html; charset=utf-8",
+      "ok": true,
+      "bytes_sample": 800
+    }
+  },
+  "local_forge_mesh": {
+    "preview": "http://127.0.0.1:8080/",
+    "profile": true,
+    "heretic_gb": 19.332
+  },
+  "redacted_continuity_key_names": [
+    "HF_TOKEN",
+    "HUGGING_FACE_HUB_TOKEN",
+    "GH_TOKEN",
+    "GITHUB_TOKEN",
+    "VERCEL_TOKEN",
+    "OPENAI_API_KEY",
+    "ANTHROPIC_API_KEY",
+    "GOOGLE_API_KEY",
+    "SUPABASE_KEY",
+    "FIREBASE_TOKEN",
+    "OAUTH_CLIENT_SECRET",
+    "DRIVE_REFRESH_TOKEN"
+  ],
+  "secrets_present_in_env_redacted": [
+    "GPG_KEY",
+    "GROK_SERVER_KEY",
+    "GROVE_TOKEN_ROTATION",
+    "XAI_API_KEY"
+  ],
+  "regenerated_at": "2026-11-15T12:44:36.310192Z",
+  "merge_chain_len": 24,
+  "agents": 23,
+  "project": "master-run-command-center",
+  "confirm": "MERGE_COMPLETE_FUTURE_SESSION",
+  "status": "MERGE_OK",
+  "combined_skills_health": {
+    "ts": "2026-11-15T12:44:18Z",
+    "cmd": "loop",
+    "pid": 28358,
+    "merge_dir": "/workspace/artifacts/future_session_merge",
+    "schema": "gta.grok.future_session_merge.v3",
+    "health": [
+      {
+        "url": "https://master-run-command-center.vercel.app/",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "url": "https://fleet-ochre-auyuksg.tmp.now/",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "url": "https://strand-osint-mesh.vercel.app/",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "url": "https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "url": "http://127.0.0.1:8080/",
+        "status": 200,
+        "ok": true
+      }
+    ],
+    "ok_count": 5
+  }
+}

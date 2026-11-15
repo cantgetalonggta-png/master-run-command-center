@@ -1,0 +1,61 @@
+{
+  "schema": "gta.grok.future_session_merge.v3.stack",
+  "ts": "2026-11-15T12:43:38.518669Z",
+  "components": [
+    {
+      "id": "swarm_manifest",
+      "path": "data/swarm-23.json",
+      "agents": 23
+    },
+    {
+      "id": "backend_registry",
+      "path": "data/BACKEND_REGISTRY_23.json",
+      "agents": 23
+    },
+    {
+      "id": "bound_surfaces",
+      "urls": {
+        "swarm": "https://master-run-command-center.vercel.app/#swarm",
+        "swarm_root": "https://master-run-command-center.vercel.app/",
+        "fleet": "https://fleet-ochre-auyuksg.tmp.now/",
+        "strand": "https://strand-osint-mesh.vercel.app/",
+        "skill_vault": "https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/"
+      }
+    },
+    {
+      "id": "background_tasks",
+      "count": 10,
+      "script": "artifacts/deployment/fsm_background_task.sh"
+    },
+    {
+      "id": "combined_skills_deploy",
+      "script": "artifacts/deployment/COMBINED_SKILLS_DEPLOY.sh"
+    },
+    {
+      "id": "health_matrix",
+      "targets": [
+        "https://master-run-command-center.vercel.app/#swarm",
+        "https://master-run-command-center.vercel.app/",
+        "https://fleet-ochre-auyuksg.tmp.now/",
+        "https://strand-osint-mesh.vercel.app/",
+        "https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/"
+      ]
+    },
+    {
+      "id": "forge_mesh_local",
+      "url": "http://127.0.0.1:8080/",
+      "role": "operator_console_no_rule_merge"
+    },
+    {
+      "id": "session_profile_drive",
+      "folder": "https://drive.google.com/drive/folders/1U4RPNWC9ukvsE8HITWAI28D2yrhwkruZ"
+    },
+    {
+      "id": "mrcc_drive_folder",
+      "folder": "https://drive.google.com/drive/folders/1JdE9pm9jVDdeN6jtnjJYg93Kex5mHquA"
+    }
+  ],
+  "deploy_artifact": "COMBINED_SKILLS_DEPLOY.sh",
+  "idempotency": "lock files under /tmp/monitors + state JSON last_run",
+  "redact_secrets": true
+}
