@@ -1,0 +1,52 @@
+{
+  "schema": "gta.long_horizon.supervisor.deploy.v1",
+  "name": "master-run-continuous-supervisor",
+  "version": "1.0.0",
+  "policy": {
+    "redact_secrets": "ALWAYS",
+    "key_values": "NEVER",
+    "bind_default": "127.0.0.1"
+  },
+  "runtime_truth": {
+    "chat_turn_guaranteed_minutes": null,
+    "background_wall_clock_target_seconds": 3600,
+    "background_wall_clock_minimum_seconds": 600,
+    "pattern": "OS durable processes + checkpoints + Automations re-entry"
+  },
+  "components": [
+    {"id": "secure_backend", "entry": "backend/secure_file_server.py", "port": 8787, "role": "frontend_static_and_public_file_api"},
+    {"id": "supervisor", "entry": "backend/supervisor/supervisor.py", "role": "background_supervisor"},
+    {"id": "worker_chain", "entry": "backend/supervisor/workers.py", "role": "chained_tasks"},
+    {"id": "orch", "entry": "pipelines/swarm_orchestration_engine.py", "role": "swarm_router"},
+    {"id": "fsm", "entry": "pipelines/future_session_merge_v3.sh", "role": "merge_idempotent"}
+  ],
+  "workers": [
+    {"id": "W1_health_local", "every_ticks": 1},
+    {"id": "W2_health_bound_surfaces", "every_ticks": 2},
+    {"id": "W3_deny_secrets", "every_ticks": 3},
+    {"id": "W4_frontend_files", "every_ticks": 4},
+    {"id": "W5_orch", "every_ticks": 5},
+    {"id": "W6_fsm", "every_ticks": 7},
+    {"id": "W7_npm_headers", "every_ticks": 10},
+    {"id": "W8_web_probe_deepsearch", "every_ticks": 6},
+    {"id": "W9_checkpoint", "every_ticks": 1},
+    {"id": "W10_self_heal_backend", "every_ticks": 2}
+  ],
+  "defaults": {
+    "duration_seconds": 3600,
+    "tick_seconds": 30,
+    "min_duration_seconds": 600
+  },
+  "observability": {
+    "log": "audits/supervisor.jsonl",
+    "status": "state/supervisor_status.json",
+    "pid": "state/supervisor.pid",
+    "checkpoint": "state/supervisor_checkpoint.json"
+  },
+  "cli": {
+    "start_1h": "python3 backend/supervisor/supervisor.py --duration 3600 --tick 30",
+    "start_10m": "python3 backend/supervisor/supervisor.py --duration 600 --tick 20",
+    "status": "python3 backend/supervisor/supervisor.py --status",
+    "stop": "python3 backend/supervisor/supervisor.py --stop"
+  }
+}
