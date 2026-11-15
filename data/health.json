@@ -1,0 +1,15 @@
+{
+  "status": "ok",
+  "service": "master-run-command-center",
+  "timestamp": "2026-11-15T22:00:59.711464+00:00",
+  "primary_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "agents": 23,
+  "schema": "gta.mrcc.health.v1",
+  "surfaces": [
+    "https://master-run-command-center.vercel.app/",
+    "https://master-run-command-center.vercel.app/#swarm",
+    "https://fleet-ochre-auyuksg.tmp.now/",
+    "https://strand-osint-mesh.vercel.app/",
+    "https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/"
+  ]
+}

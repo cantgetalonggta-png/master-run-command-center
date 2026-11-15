@@ -1,23 +1,32 @@
 {
   "name": "master-run-command-center",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
-  "description": "Master-Run Command Center — Grok Computer pipeline console with full frontend deployment framework",
+  "description": "Master-Run Command Center \u2014 Grok Computer pipeline console with full frontend deployment framework",
   "scripts": {
     "dev": "python3 -m http.server 5173 --bind 0.0.0.0",
     "start": "python3 -m http.server 8080 --bind 0.0.0.0",
     "serve": "npx --yes serve -l 4173 .",
-    "check:html": "python3 -c \"from pathlib import Path; t=Path('index.html').read_text(); assert '<!DOCTYPE html>' in t; print('index.html OK', len(t), 'bytes')\"",
-    "check:json": "python3 -c \"import json,pathlib; [json.loads(p.read_text()) for p in pathlib.Path('data').glob('*.json')]; print('all json OK')\"",
+    "check:html": "python3 -c \"from pathlib import Path; t=Path('index.html').read_text(); assert '<!DOCTYPE html>' in t; assert 'data-tab=\\\"swarm\\\"' in t; assert 'data-tab=\\\"learning\\\"' in t; print('html ok', len(t))\"",
+    "check:json": "python3 -c \"import json,pathlib; [json.loads(p.read_text()) for p in pathlib.Path('data').glob('*.json')]; print('json ok')\"",
     "check:headers": "python3 scripts/verify_headers.py",
-    "audit": "npm run check:html && npm run check:json",
+    "audit": "npm run check:html && npm run check:json && npm run check:headers",
     "health": "bash scripts/COMBINED_SKILLS_DEPLOY.sh status",
     "deploy:notes": "echo 'Use: vercel --prod (requires VERCEL_TOKEN) or GitHub integration push to main'",
-    "build": "echo 'Static site — no build step; Framework: Other on Vercel'",
-    "test:local": "npm run audit && npm run check:html"
+    "build": "echo static && npm run audit",
+    "test:local": "npm run audit && python3 scripts/verify_agents.py",
+    "check:agents": "python3 scripts/verify_agents.py",
+    "distill": "python3 scripts/distill.py data/skills.json",
+    "debug-opts": "python3 scripts/generate_executable.py ALL"
   },
   "engines": {
     "node": ">=18"
   },
-  "keywords": ["command-center", "multi-agent", "swarm", "vercel", "frontend-deployment"]
+  "keywords": [
+    "command-center",
+    "multi-agent",
+    "swarm",
+    "vercel",
+    "frontend-deployment"
+  ]
 }

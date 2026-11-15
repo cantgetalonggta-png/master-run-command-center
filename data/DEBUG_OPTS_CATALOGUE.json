@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-11-15T22:00:59.711464+00:00",
+  "primary_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "agent": "DEP-05 DEBUG-OPTS",
+  "modes": [
+    "live-testing",
+    "LIVE-DEPLOYMENT",
+    "background_synchronization",
+    "ui_shell_sync",
+    "swarm_view_refresh",
+    "static_asset_verify",
+    "public_surface_probe",
+    "citation_refresh",
+    "scope_guard_pass",
+    "onboarding_refresh",
+    "toolchain_doc_sync",
+    "drill_card_rotate",
+    "agent_individuality_lock",
+    "secrets_redaction_enforced",
+    "no_external_rule_merge",
+    "hades_worker_envelope",
+    "session_create_tool_expansion",
+    "future_session_merge_v3",
+    "primary_continuity_lock"
+  ],
+  "security": {
+    "secrets_redacted": true,
+    "individuality_lock": true,
+    "no_external_merge": true
+  }
+}

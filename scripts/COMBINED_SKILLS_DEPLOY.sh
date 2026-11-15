@@ -2,7 +2,7 @@
 # COMBINED_SKILLS_DEPLOY.sh — idempotent health + seed + loop for future_session_merge
 # Commands: once | loop | continue | finish | status
 set -uo pipefail
-ROOT="/workspace/artifacts/future_session_merge"
+ROOT="/workspace/artifacts/master-run-command-center"
 STATE="/tmp/monitors/state/combined_skills_deploy.json"
 LOG="/workspace/artifacts/logs/combined_skills_deploy.log"
 LOCK="/tmp/monitors/combined_skills_deploy.lock"
@@ -26,7 +26,7 @@ prev.update({
   "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
   "cmd": cmd,
   "pid": os.getpid(),
-  "merge_dir": "/workspace/artifacts/future_session_merge",
+  "merge_dir": "/workspace/artifacts/master-run-command-center",
   "schema": "gta.grok.future_session_merge.v3",
 })
 # health probes
@@ -37,6 +37,8 @@ urls=[
   "https://fleet-ochre-auyuksg.tmp.now/",
   "https://strand-osint-mesh.vercel.app/",
   "https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/",
+  "https://master-run-command-center.vercel.app/data/health.json",
+  "https://master-run-command-center.vercel.app/api/health",
   "http://127.0.0.1:8080/",
 ]
 health=[]

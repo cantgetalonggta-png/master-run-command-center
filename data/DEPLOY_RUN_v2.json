@@ -1,12 +1,14 @@
 {
-  "schema": "gta.ma23.deploy_run_v2",
-  "repo": "https://github.com/cantgetalonggta-png/master-run-command-center",
-  "typecheck": "pass",
-  "build": "pass-static",
-  "dev_mode": "/dev npm run dev",
-  "headers": "pass-verify_headers.py",
-  "framework_doc": "docs/IMPLEMENTATION_FRAMEWORK_FRONTEND_DEPLOYMENT.md",
-  "deploy_panel": "index.html#deploy",
-  "updated_at_utc": "2026-11-15T13:10:00Z",
-  "xai_credits": "n/a"
+  "run_id": "autonomous-2026-11-15T220059",
+  "timestamp": "2026-11-15T22:00:59.711464+00:00",
+  "typecheck": "PASS",
+  "build": "static-echo",
+  "skills_distilled": {
+    "custom": 9,
+    "bundled": 10,
+    "debug_opts": 19
+  },
+  "agents": 23,
+  "deploy_target": "vercel+github",
+  "status": "IN_PROGRESS_AUTONOMOUS"
 }

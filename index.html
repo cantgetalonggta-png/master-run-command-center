@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="description" content="Master-Run Command Center — skills, GitHub audit, media, research, telemetry, deployment health"/>
 <title>Master-Run Command Center</title>
+<!-- build: autonomous 2026-11-15T22:01Z schema gta.mrcc.v3 agents=23 -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0f'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='28' fill='%237cffb2'%3EM%3C/text%3E%3C/svg%3E"/>
 <style>
 :root{
@@ -84,8 +85,9 @@ th{color:var(--muted);font-weight:650}
     <button data-tab="telemetry">Telemetry</button>
     <button data-tab="health">Health</button>
     <button data-tab="swarm">Swarm-23</button>
+    <button data-tab="learning">Learning</button>
     <button data-tab="deploy">Deploy</button>
-  <button type="button" data-mod="deploy" class="navbtn">Deploy</button></nav>
+  </nav>
 </header>
 <main>
 <section id="overview" class="panel active">
@@ -317,6 +319,53 @@ th{color:var(--muted);font-weight:650}
     <h2>Background task bus (immediate execute)</h2>
     <p class="muted">Client-side orchestration loop. Tasks are tickets bound to agent_code + session_id. Does not invent tools outside each agent’s capabilities_allowed.</p>
     <pre id="swarm-task-log" style="max-height:280px">No tasks running yet. Click “Start background tasks immediately”.</pre>
+  </div>
+</section>
+
+
+<section id="learning" class="panel">
+  <div class="card">
+    <h1>Learning-Center</h1>
+    <p class="muted">Operator onboarding · skills glossary · toolchain · runbooks · tabletop drills (LC-01…LC-05). Primary continuity session locked.</p>
+    <div class="grid" id="lc-teams" style="margin-top:12px">
+      <div class="skill-card"><b>LC-01 ONBOARD</b><div class="muted">First-run checklist · operator orientation</div></div>
+      <div class="skill-card"><b>LC-02 SKILL-LIB</b><div class="muted">Local skills.json browser · glossary</div></div>
+      <div class="skill-card"><b>LC-03 TOOLCHAIN</b><div class="muted">Architecture blueprint · tool map</div></div>
+      <div class="skill-card"><b>LC-04 RUNBOOK</b><div class="muted">Incident · redeploy · rollback steps</div></div>
+      <div class="skill-card"><b>LC-05 DRILL</b><div class="muted">Tabletop scenarios · role practice</div></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h2>First-run checklist</h2>
+    <ol class="muted" id="lc-checklist">
+      <li>Open Overview — confirm continuity ID and 23/23 agents</li>
+      <li>Open Skills — search inventory, export CSV</li>
+      <li>Open Swarm-23 — Start background tasks, filter by team</li>
+      <li>Open Health — run asset matrix probes</li>
+      <li>Open Deploy — copy deploy notes, verify headers</li>
+      <li>Read docs/IMPLEMENTATION_FRAMEWORK_FRONTEND_DEPLOYMENT.md</li>
+      <li>Run <code>bash scripts/COMBINED_SKILLS_DEPLOY.sh status</code></li>
+      <li>Probe <code>/api/health</code> and <code>/data/health.json</code></li>
+    </ol>
+    <div class="row" style="margin-top:10px">
+      <button class="btn primary" id="lc-mark-ready">Mark onboarding complete</button>
+      <button class="btn" data-copy="#lc-checklist">Copy checklist</button>
+      <span class="badge" id="lc-state">Onboarding: pending</span>
+    </div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h2>DEBUG-OPTS catalogue (DEP-05)</h2>
+    <pre id="lc-debug-opts" class="muted">Loading…</pre>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h2>Runbook links</h2>
+    <div class="row">
+      <a class="btn" href="./docs/PRODUCTION_CHECKLIST.md" target="_blank" rel="noopener">Production checklist</a>
+      <a class="btn" href="./docs/BACKEND_INTEGRATION_CONTRACTS.md" target="_blank" rel="noopener">Backend contracts</a>
+      <a class="btn" href="./docs/IMPLEMENTATION_FRAMEWORK_FRONTEND_DEPLOYMENT.md" target="_blank" rel="noopener">Implementation framework</a>
+      <a class="btn" href="./data/status.md" target="_blank" rel="noopener">Status</a>
+      <a class="btn" href="./data/health.json" target="_blank" rel="noopener">Health JSON</a>
+    </div>
   </div>
 </section>
 

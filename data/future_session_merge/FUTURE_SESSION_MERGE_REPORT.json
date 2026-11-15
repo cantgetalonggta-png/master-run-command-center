@@ -1,45 +1,18 @@
 {
-  "status": "MERGE_OK",
-  "confirm": "MERGE_COMPLETE_FUTURE_SESSION",
-  "session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
-  "host": "hds-pojwt21ycfo9",
-  "chain_len": 24,
-  "agents": 23,
-  "project": "master-run-command-center",
   "schema": "gta.grok.future_session_merge.v3",
-  "generated_at": "2026-11-15T12:44:36.310192Z",
-  "paths": {
-    "merge_chain": "/workspace/artifacts/future_session_merge/MERGE_CHAIN.json",
-    "audit": "/workspace/artifacts/future_session_merge/audit/REGEN_AUDIT.json",
-    "stack": "/workspace/artifacts/future_session_merge/stack/STACK.json",
-    "swarm": "/workspace/artifacts/future_session_merge/stack/swarm-23.json",
-    "backend": "/workspace/artifacts/future_session_merge/stack/BACKEND_REGISTRY_23.json",
-    "deploy_script": "/workspace/artifacts/deployment/COMBINED_SKILLS_DEPLOY.sh"
-  },
-  "bound_surfaces": {
-    "swarm": "https://master-run-command-center.vercel.app/#swarm",
-    "swarm_root": "https://master-run-command-center.vercel.app/",
-    "fleet": "https://fleet-ochre-auyuksg.tmp.now/",
-    "strand": "https://strand-osint-mesh.vercel.app/",
-    "skill_vault": "https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/"
-  },
-  "redacted_continuity_key_names": [
-    "HF_TOKEN",
-    "HUGGING_FACE_HUB_TOKEN",
-    "GH_TOKEN",
-    "GITHUB_TOKEN",
-    "VERCEL_TOKEN",
-    "OPENAI_API_KEY",
-    "ANTHROPIC_API_KEY",
-    "GOOGLE_API_KEY",
-    "SUPABASE_KEY",
-    "FIREBASE_TOKEN",
-    "OAUTH_CLIENT_SECRET",
-    "DRIVE_REFRESH_TOKEN"
+  "timestamp": "2026-11-15T22:00:59.711464+00:00",
+  "primary_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "project": "master-run-command-center",
+  "status": "AUTONOMOUS_BUILD_ACTIVE",
+  "actions": [
+    "distilled_server_skills",
+    "installed_verify_agents_distill_scripts",
+    "health_json_api",
+    "debug_opts_catalogue",
+    "swarm_timestamp_refresh",
+    "pending_github_push",
+    "pending_vercel_deploy"
   ],
-  "health_ok_count": 5,
-  "background": {
-    "fsm_merge_pid": "26122",
-    "combined_loop_pid": "28339"
-  }
+  "agent_count": 23,
+  "skills_custom": 9
 }
