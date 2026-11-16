@@ -1,0 +1,13 @@
+{
+  "schema": "gta.mrcc.livekit_bridge.v1",
+  "call_path": "UI \u2192 SwarmViewModel \u2192 SwarmRepository \u2192 SessionRegistry.setTabUnlocked \u21b3 LiveKitBridge",
+  "primary_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "config": {
+    "reasoningEffort": "xhigh",
+    "modes": ["multi-step", "live-testing", "LIVE-DEPLOYMENT", "background_synchronization"],
+    "multiStep": true,
+    "model": "grok-4.5-high",
+    "processing_abilities": ["parallel_ingestion", "multi_agent_tooling", "multi_provider", "subprocess"]
+  },
+  "status": "PRODUCTION_READY"
+}
