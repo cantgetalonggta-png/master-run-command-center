@@ -1,7 +1,7 @@
 {
   "schema": "gta.mrcc.multiprocess_swarm.v1",
-  "started": "2026-11-16T21:06:56.819563+00:00",
-  "finished": "2026-11-16T21:06:57.136901+00:00",
+  "started": "2026-11-16T21:11:50.363128+00:00",
+  "finished": "2026-11-16T21:11:50.829924+00:00",
   "primary_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
   "ok_count": 23,
   "agent_count": 23,
@@ -13,13 +13,13 @@
       "session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
       "ok": true,
       "ms": 0,
-      "pid": 866,
+      "pid": 764,
       "result": {
         "action": "lock_primary",
         "ok": true,
         "primary": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
       },
-      "ts": "2026-11-16T21:06:56.835262+00:00",
+      "ts": "2026-11-16T21:11:50.430916+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -28,8 +28,8 @@
       "team": "Deployment",
       "session_id": "c8d1c118-9e57-406b-b238-86cdc5363c47",
       "ok": true,
-      "ms": 295,
-      "pid": 868,
+      "ms": 394,
+      "pid": 762,
       "result": {
         "action": "health_matrix",
         "hits": [
@@ -37,30 +37,30 @@
             "url": "https://master-run-command-center.vercel.app/",
             "status": 200,
             "ok": true,
-            "ms": 67
+            "ms": 130
           },
           {
             "url": "https://fleet-ochre-auyuksg.tmp.now/",
             "status": 200,
             "ok": true,
-            "ms": 70
+            "ms": 76
           },
           {
             "url": "https://strand-osint-mesh.vercel.app/",
             "status": 200,
             "ok": true,
-            "ms": 89
+            "ms": 112
           },
           {
             "url": "https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/",
             "status": 200,
             "ok": true,
-            "ms": 61
+            "ms": 72
           }
         ],
         "ok": true
       },
-      "ts": "2026-11-16T21:06:57.131782+00:00",
+      "ts": "2026-11-16T21:11:50.823821+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -70,13 +70,13 @@
       "session_id": "6fb3883a-da77-49fe-b6ba-46902e21aded",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 763,
       "result": {
         "action": "task_DEP-03",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.835565+00:00",
+      "ts": "2026-11-16T21:11:50.427620+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -86,13 +86,13 @@
       "session_id": "c1d1e9cc-9602-4cd1-831f-5dd10df9b995",
       "ok": true,
       "ms": 0,
-      "pid": 869,
+      "pid": 763,
       "result": {
         "action": "task_DEP-04",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.835647+00:00",
+      "ts": "2026-11-16T21:11:50.428312+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -102,13 +102,13 @@
       "session_id": "344f6cd5-1562-4727-9a66-d8593b3e7cfa",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 763,
       "result": {
         "action": "task_DEP-05",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.835749+00:00",
+      "ts": "2026-11-16T21:11:50.428351+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -118,13 +118,13 @@
       "session_id": "64e5eebd-41b5-43ec-a762-c40731a9f2de",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 763,
       "result": {
         "action": "task_DEP-06",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.835782+00:00",
+      "ts": "2026-11-16T21:11:50.434613+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -134,13 +134,13 @@
       "session_id": "568d6270-a86d-460b-87d7-1535f44a1680",
       "ok": true,
       "ms": 0,
-      "pid": 866,
+      "pid": 766,
       "result": {
         "action": "task_FE-01",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.835847+00:00",
+      "ts": "2026-11-16T21:11:50.432444+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -150,13 +150,13 @@
       "session_id": "e302f5e6-2541-490f-ae94-12467ac46bbe",
       "ok": true,
       "ms": 0,
-      "pid": 866,
+      "pid": 764,
       "result": {
         "action": "task_FE-02",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.835888+00:00",
+      "ts": "2026-11-16T21:11:50.431820+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -166,13 +166,13 @@
       "session_id": "38e3b225-03e5-41ec-9721-460559aba2d6",
       "ok": true,
       "ms": 0,
-      "pid": 866,
+      "pid": 764,
       "result": {
         "action": "task_FE-03",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.835916+00:00",
+      "ts": "2026-11-16T21:11:50.431934+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -182,13 +182,13 @@
       "session_id": "c921f3a6-f5b5-4b22-a0ad-bb44ec3d4cf6",
       "ok": true,
       "ms": 0,
-      "pid": 866,
+      "pid": 764,
       "result": {
         "action": "task_FE-04",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.835936+00:00",
+      "ts": "2026-11-16T21:11:50.431962+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -198,13 +198,13 @@
       "session_id": "60ee66e8-e76a-4fde-ac4b-4bff80a8914e",
       "ok": true,
       "ms": 0,
-      "pid": 866,
+      "pid": 764,
       "result": {
         "action": "task_FE-05",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.835953+00:00",
+      "ts": "2026-11-16T21:11:50.432037+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -214,13 +214,13 @@
       "session_id": "94d1315d-bc98-4736-82e0-dbb866503f37",
       "ok": true,
       "ms": 0,
-      "pid": 866,
+      "pid": 764,
       "result": {
         "action": "task_FE-06",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.835981+00:00",
+      "ts": "2026-11-16T21:11:50.432102+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -229,8 +229,8 @@
       "team": "Research",
       "session_id": "08e87b41-196a-439e-b367-e5814927a65e",
       "ok": true,
-      "ms": 60,
-      "pid": 866,
+      "ms": 124,
+      "pid": 764,
       "result": {
         "action": "scout",
         "ok": true,
@@ -238,10 +238,10 @@
           "url": "https://master-run-command-center.vercel.app/",
           "status": 200,
           "ok": true,
-          "ms": 59
+          "ms": 123
         }
       },
-      "ts": "2026-11-16T21:06:56.896389+00:00",
+      "ts": "2026-11-16T21:11:50.556893+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -251,13 +251,13 @@
       "session_id": "843b27c9-64ce-47a4-bc80-8b83e868e21b",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 766,
       "result": {
         "action": "task_RS-02",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.838759+00:00",
+      "ts": "2026-11-16T21:11:50.433245+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -267,13 +267,13 @@
       "session_id": "4e27f581-8882-403b-b406-5a0f7471bb7e",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 766,
       "result": {
         "action": "task_RS-03",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.838811+00:00",
+      "ts": "2026-11-16T21:11:50.433337+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -283,13 +283,13 @@
       "session_id": "fc8a34dc-62d7-469c-a3f6-e403c7e2cba2",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 766,
       "result": {
         "action": "task_RS-04",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.838835+00:00",
+      "ts": "2026-11-16T21:11:50.433455+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -299,13 +299,13 @@
       "session_id": "2b074235-5eee-474a-8b14-16c950e85200",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 766,
       "result": {
         "action": "task_RS-05",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.838859+00:00",
+      "ts": "2026-11-16T21:11:50.433579+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -315,13 +315,13 @@
       "session_id": "230bc671-9039-44dd-9ac0-0162ad97cbeb",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 766,
       "result": {
         "action": "task_RS-06",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.838886+00:00",
+      "ts": "2026-11-16T21:11:50.433613+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -331,13 +331,13 @@
       "session_id": "36f15bb7-eb60-4502-8619-2b3e215b5090",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 766,
       "result": {
         "action": "task_LC-01",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.838906+00:00",
+      "ts": "2026-11-16T21:11:50.433634+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -347,13 +347,13 @@
       "session_id": "95ec5721-522b-4876-916d-aac775c2c77c",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 766,
       "result": {
         "action": "task_LC-02",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.838939+00:00",
+      "ts": "2026-11-16T21:11:50.433665+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -363,13 +363,13 @@
       "session_id": "4b79e71a-b4dd-4f24-986b-c47a51beb4b4",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 766,
       "result": {
         "action": "task_LC-03",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.838967+00:00",
+      "ts": "2026-11-16T21:11:50.433752+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -379,13 +379,13 @@
       "session_id": "81a402f4-0f69-4434-bbe7-cc4b524087d3",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 766,
       "result": {
         "action": "task_LC-04",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.838992+00:00",
+      "ts": "2026-11-16T21:11:50.433857+00:00",
       "executor": "multiprocess-plugin"
     },
     {
@@ -395,13 +395,13 @@
       "session_id": "c5168efe-bc35-4e40-8bd4-1ee91da2e3ad",
       "ok": true,
       "ms": 0,
-      "pid": 867,
+      "pid": 766,
       "result": {
         "action": "task_LC-05",
         "ok": true,
         "note": "identity-isolated process task"
       },
-      "ts": "2026-11-16T21:06:56.839017+00:00",
+      "ts": "2026-11-16T21:11:50.438082+00:00",
       "executor": "multiprocess-plugin"
     }
   ],

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orbit Command · Swarm Demo</title>
+  <style>
+    :root {
+      --bg: #0c1210; --surface: #151c19; --fg: #e7efe9; --muted: #8ea396;
+      --primary: #3dcaa0; --border: #24302b; --warn: #e2b15a;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body { font-family: ui-sans-serif, system-ui, sans-serif; background: var(--bg); color: var(--fg);
+           min-height: 100vh; padding: 24px; }
+    h1 { font-size: 1.8rem; margin: 8px 0 4px; }
+    .kicker { color: var(--primary); font-family: ui-monospace, monospace; font-size: 0.85rem; letter-spacing: 0.06em; }
+    .muted { color: var(--muted); margin-bottom: 20px; max-width: 52rem; line-height: 1.45; }
+    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+    .code { color: var(--primary); font-family: ui-monospace, monospace; font-size: 0.8rem; }
+    .ok { color: var(--primary); font-weight: 600; }
+    .warn { color: var(--warn); }
+    button { margin-top: 16px; height: 44px; padding: 0 16px; border-radius: 10px; border: 0;
+             background: var(--primary); color: var(--bg); font-weight: 600; cursor: pointer; }
+    #log { margin-top: 16px; white-space: pre-wrap; font-family: ui-monospace, monospace;
+           font-size: 0.8rem; color: var(--muted); max-height: 280px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <p class="kicker">HUGGING FACE SPACE · STATIC SDK · PART 18</p>
+  <h1>Orbit Command · 23-agent swarm demo</h1>
+  <p class="muted">Local-worker identities for DEP / FE / RS / LC. Session ids are keys, not 23 remote model hosts. Primary lock 211e2cba-1b23-5ce8-945a-d5e158b037a2.</p>
+  <div class="grid" id="grid"></div>
+  <button id="run" type="button">Run local swarm simulation</button>
+  <pre id="log"></pre>
+  <script>
+    const agents = [
+      ["DEP-01","ORBIT-LEAD"],["DEP-02","PULSE-HEALTH"],["DEP-03","SHIP-GATE"],["DEP-04","SYNC-BUS"],
+      ["DEP-05","DEBUG-OPTS"],["DEP-06","TASK-DAEMON"],["FE-01","UI-SHELL"],["FE-02","SWARM-VIEW"],
+      ["FE-03","KPI-BOARD"],["FE-04","ASSET-WIRE"],["FE-05","A11Y-UX"],["FE-06","EXPORT-IO"],
+      ["RS-01","SCOUT-WEB"],["RS-02","SOURCE-MAP"],["RS-03","CLAIM-SPLIT"],["RS-04","REPORT-ARCH"],
+      ["RS-05","DIFF-WATCH"],["RS-06","SCOPE-GUARD"],["LC-01","ONBOARD"],["LC-02","SKILL-LIB"],
+      ["LC-03","TOOLCHAIN"],["LC-04","RUNBOOK"],["LC-05","DRILL"]
+    ];
+    const grid = document.getElementById("grid");
+    agents.forEach(([code, name]) => {
+      const el = document.createElement("div");
+      el.className = "card";
+      el.innerHTML = `<div class="code">${code}</div><div>${name}</div><div class="ok" id="s-${code}">IDLE</div>`;
+      grid.appendChild(el);
+    });
+    document.getElementById("run").onclick = async () => {
+      const log = document.getElementById("log");
+      log.textContent = "sim start " + new Date().toISOString() + "\n";
+      for (const [code, name] of agents) {
+        document.getElementById("s-"+code).textContent = "RUNNING";
+        await new Promise(r => setTimeout(r, 40));
+        document.getElementById("s-"+code).textContent = "OK";
+        log.textContent += `${code} ${name} OK action=task_${code}\n`;
+      }
+      log.textContent += "done 23/23\n";
+    };
+  </script>
+</body>
+</html>
