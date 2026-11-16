@@ -1,0 +1,514 @@
+{
+  "schema": "gta.mrcc.swarm_run.v1",
+  "started": "2026-11-16T20:50:51.171853+00:00",
+  "finished": "2026-11-16T20:50:59.363574+00:00",
+  "primary_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "host": "hds-mz2voprxu9zw",
+  "agent_count": 23,
+  "ok_count": 23,
+  "agents": [
+    {
+      "ts": "2026-11-16T20:50:51.171899+00:00",
+      "code": "DEP-01",
+      "callsign": "ORBIT-LEAD",
+      "team": "Deployment",
+      "session_id": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "lock_primary",
+        "detail": "primary locked 211e2cba-1b23-5ce8-945a-d5e158b037a2",
+        "ok": true
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:52.649929+00:00",
+      "code": "DEP-02",
+      "callsign": "PULSE-HEALTH",
+      "team": "Deployment",
+      "session_id": "c8d1c118-9e57-406b-b238-86cdc5363c47",
+      "ok": true,
+      "ms": 1074,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "health_matrix",
+        "ok": true,
+        "hits": [
+          {
+            "url": "https://master-run-command-center.vercel.app/",
+            "status": 200,
+            "ok": true,
+            "ms": 114
+          },
+          {
+            "url": "https://fleet-ochre-auyuksg.tmp.now/",
+            "status": 200,
+            "ok": true,
+            "ms": 76
+          },
+          {
+            "url": "https://strand-osint-mesh.vercel.app/",
+            "status": 200,
+            "ok": true,
+            "ms": 815
+          },
+          {
+            "url": "https://multi-agent-skill-vault-git-gh-pages-echo-ec69.vercel.app/",
+            "status": 200,
+            "ok": true,
+            "ms": 65
+          }
+        ]
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:53.058521+00:00",
+      "code": "DEP-03",
+      "callsign": "SHIP-GATE",
+      "team": "Deployment",
+      "session_id": "6fb3883a-da77-49fe-b6ba-46902e21aded",
+      "ok": true,
+      "ms": 14,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "ship_gate",
+        "ok": true,
+        "detail": "vercel.json exists=True bytes=1863"
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:53.311106+00:00",
+      "code": "DEP-04",
+      "callsign": "SYNC-BUS",
+      "team": "Deployment",
+      "session_id": "c1d1e9cc-9602-4cd1-831f-5dd10df9b995",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "sync_status",
+        "ok": true,
+        "bytes": 1887
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:53.642280+00:00",
+      "code": "DEP-05",
+      "callsign": "DEBUG-OPTS",
+      "team": "Deployment",
+      "session_id": "344f6cd5-1562-4727-9a66-d8593b3e7cfa",
+      "ok": true,
+      "ms": 88,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "debug_opts",
+        "ok": true,
+        "modes": 19
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:54.103383+00:00",
+      "code": "DEP-06",
+      "callsign": "TASK-DAEMON",
+      "team": "Deployment",
+      "session_id": "64e5eebd-41b5-43ec-a762-c40731a9f2de",
+      "ok": true,
+      "ms": 19,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "task_daemon",
+        "ok": true,
+        "stress": "RUNNING",
+        "tick": 17
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:54.482565+00:00",
+      "code": "FE-01",
+      "callsign": "UI-SHELL",
+      "team": "Frontend",
+      "session_id": "568d6270-a86d-460b-87d7-1535f44a1680",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "ui_shell",
+        "ok": true,
+        "route": "/"
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:54.900594+00:00",
+      "code": "FE-02",
+      "callsign": "SWARM-VIEW",
+      "team": "Frontend",
+      "session_id": "e302f5e6-2541-490f-ae94-12467ac46bbe",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "swarm_cards",
+        "ok": true,
+        "count": 23
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:55.171353+00:00",
+      "code": "FE-03",
+      "callsign": "KPI-BOARD",
+      "team": "Frontend",
+      "session_id": "38e3b225-03e5-41ec-9721-460559aba2d6",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "kpi_snapshot",
+        "ok": true,
+        "agents": 23,
+        "teams": 4
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:55.640176+00:00",
+      "code": "FE-04",
+      "callsign": "ASSET-WIRE",
+      "team": "Frontend",
+      "session_id": "c921f3a6-f5b5-4b22-a0ad-bb44ec3d4cf6",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "asset_count",
+        "ok": true,
+        "blueprints": 7
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:55.919887+00:00",
+      "code": "FE-05",
+      "callsign": "A11Y-UX",
+      "team": "Frontend",
+      "session_id": "60ee66e8-e76a-4fde-ac4b-4bff80a8914e",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "a11y_tokens",
+        "ok": true,
+        "pointer_rule": true
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:56.341506+00:00",
+      "code": "FE-06",
+      "callsign": "EXPORT-IO",
+      "team": "Frontend",
+      "session_id": "94d1315d-bc98-4736-82e0-dbb866503f37",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "export_ready",
+        "ok": true,
+        "format": "json"
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:56.652848+00:00",
+      "code": "RS-01",
+      "callsign": "SCOUT-WEB",
+      "team": "Research",
+      "session_id": "08e87b41-196a-439e-b367-e5814927a65e",
+      "ok": true,
+      "ms": 52,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "scout_primary_surface",
+        "ok": true,
+        "hits": [
+          {
+            "url": "https://master-run-command-center.vercel.app/",
+            "status": 200,
+            "ok": true,
+            "ms": 51
+          }
+        ]
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:56.904206+00:00",
+      "code": "RS-02",
+      "callsign": "SOURCE-MAP",
+      "team": "Research",
+      "session_id": "843b27c9-64ce-47a4-bc80-8b83e868e21b",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "source_map",
+        "ok": true,
+        "sources": [
+          "github.com/cantgetalonggta-png/master-run-command-center",
+          "vercel.app live surface"
+        ]
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:57.162242+00:00",
+      "code": "RS-03",
+      "callsign": "CLAIM-SPLIT",
+      "team": "Research",
+      "session_id": "4e27f581-8882-403b-b406-5a0f7471bb7e",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "claim_split",
+        "ok": true,
+        "solid": "5 public surfaces previously HTTP 200",
+        "maybe": "api/health until redeploy"
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:57.417128+00:00",
+      "code": "RS-04",
+      "callsign": "REPORT-ARCH",
+      "team": "Research",
+      "session_id": "fc8a34dc-62d7-469c-a3f6-e403c7e2cba2",
+      "ok": true,
+      "ms": 12,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "report_parts",
+        "ok": true,
+        "parts": 15
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:57.635879+00:00",
+      "code": "RS-05",
+      "callsign": "DIFF-WATCH",
+      "team": "Research",
+      "session_id": "2b074235-5eee-474a-8b14-16c950e85200",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "diff_watch",
+        "ok": true,
+        "note": "local snapshot vs last known main commit 99f5156"
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:57.861597+00:00",
+      "code": "RS-06",
+      "callsign": "SCOPE-GUARD",
+      "team": "Research",
+      "session_id": "230bc671-9039-44dd-9ac0-0162ad97cbeb",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "scope_guard",
+        "ok": true,
+        "scope": "public-record only",
+        "secrets": "redacted"
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:58.121090+00:00",
+      "code": "LC-01",
+      "callsign": "ONBOARD",
+      "team": "Learning",
+      "session_id": "36f15bb7-eb60-4502-8619-2b3e215b5090",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "onboard",
+        "ok": true,
+        "steps": [
+          "open command",
+          "filter team",
+          "read agent log"
+        ]
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:58.371064+00:00",
+      "code": "LC-02",
+      "callsign": "SKILL-LIB",
+      "team": "Learning",
+      "session_id": "95ec5721-522b-4876-916d-aac775c2c77c",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "skill_lib",
+        "ok": true,
+        "skills": 11
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:58.631006+00:00",
+      "code": "LC-03",
+      "callsign": "TOOLCHAIN",
+      "team": "Learning",
+      "session_id": "4b79e71a-b4dd-4f24-986b-c47a51beb4b4",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "toolchain",
+        "ok": true,
+        "stack": "TanStack Start + local python swarm runner"
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:58.886761+00:00",
+      "code": "LC-04",
+      "callsign": "RUNBOOK",
+      "team": "Learning",
+      "session_id": "81a402f4-0f69-4434-bbe7-cc4b524087d3",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "runbook",
+        "ok": true,
+        "redeploy": "git push main on master-run-command-center"
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    },
+    {
+      "ts": "2026-11-16T20:50:59.114320+00:00",
+      "code": "LC-05",
+      "callsign": "DRILL",
+      "team": "Learning",
+      "session_id": "c5168efe-bc35-4e40-8bd4-1ee91da2e3ad",
+      "ok": true,
+      "ms": 0,
+      "host": "hds-mz2voprxu9zw",
+      "pid": 2602,
+      "result": {
+        "action": "drill",
+        "ok": true,
+        "scenario": "surface flake -> re-probe -> continue"
+      },
+      "error": null,
+      "individuality_lock": true,
+      "executor": "local-python-worker",
+      "note": "This process executed the agent task. The remote session id is an identity key, not a second live model."
+    }
+  ]
+}
