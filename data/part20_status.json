@@ -1,0 +1,30 @@
+{
+  "part": 20,
+  "ts": "2026-11-16T21:49:28.785991+00:00",
+  "primary_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "artifacts_fuse": "I/O ERROR \u2014 using /workspace/work mirror",
+  "hf_tools": {
+    "transformers": "5.20.2",
+    "torch": "2.14.1+cpu",
+    "huggingface_hub": "2.4.0",
+    "pipeline_gpt2": "OK",
+    "AutoModel_gpt2": "OK",
+    "git_xet": "0.2.1",
+    "git_lfs": "3.6.1",
+    "clone_skip": "/workspace/work/gpt2-skip",
+    "clone_full": "/workspace/work/gpt2-full (5.23 GiB LFS)",
+    "snapshot_download": "/workspace/work/models/gpt2",
+    "space_live": "https://huggingface.co/spaces/albedd/orbit-command-swarm",
+    "auth": "device code pending CZHY-GIMX"
+  },
+  "aws": {
+    "cli": "2.40.4",
+    "profile": "mrcc",
+    "region": "us-east-2",
+    "experience": "new",
+    "login": "WAITING new PKCE session \u2014 previous code state=fe9db8be EXPIRED",
+    "url_file": "/workspace/work/state/aws_login_url.txt",
+    "agent_toolkit": "pending login"
+  },
+  "note": "User-provided AWS code was for dead PKCE session. Must open NEW authorize URL and paste NEW code only."
+}
