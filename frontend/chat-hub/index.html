@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Orbit Command · Chat Hub</title>
+  <style>
+    :root { --bg:#0c1210; --panel:#151c19; --line:#24302b; --text:#e7efe9; --muted:#8ea396; --accent:#3dcaa0; --warn:#e2b15a; }
+    * { box-sizing: border-box; margin: 0; }
+    body { font-family: ui-sans-serif, system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    header { padding: 20px 28px; border-bottom: 1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
+    header h1 { font-size: 18px; letter-spacing: 0.04em; }
+    header span { color: var(--accent); font-family: ui-monospace, monospace; font-size: 12px; }
+    main { display: grid; grid-template-columns: 260px 1fr 300px; height: calc(100vh - 64px); }
+    aside, section, .rail { border-right: 1px solid var(--line); padding: 16px; overflow: auto; }
+    .rail { border-right: none; border-left: 1px solid var(--line); }
+    .agent { padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 8px; background: var(--panel); }
+    .agent b { display:block; font-size: 13px; }
+    .agent i { color: var(--muted); font-style: normal; font-size: 11px; }
+    .chat { display:flex; flex-direction:column; height:100%; }
+    .log { flex:1; overflow:auto; padding: 12px; background: #0f1613; border-radius: 12px; border: 1px solid var(--line); font-family: ui-monospace, monospace; font-size: 12px; line-height: 1.5; color: var(--muted); }
+    .composer { display:flex; gap: 8px; margin-top: 12px; }
+    input { flex:1; background: var(--panel); border: 1px solid var(--line); color: var(--text); border-radius: 10px; padding: 12px 14px; }
+    button { background: var(--accent); color: #062018; border:0; border-radius: 10px; padding: 12px 16px; font-weight: 700; cursor: pointer; }
+    .pill { display:inline-block; padding: 2px 8px; border-radius: 999px; background: #1a2a24; color: var(--accent); font-size: 11px; }
+    .warn { color: var(--warn); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ORBIT COMMAND · CHAT HUB / BRIDGE</h1>
+    <span>23-agent swarm · production surface</span>
+  </header>
+  <main>
+    <aside id="agents"></aside>
+    <section class="chat">
+      <div class="log" id="log">[system] Chat hub online. Bridge SessionRegistry path ready.<br/>[system] HF bucket albedd/DeepSeek-V4… config synced.<br/>[system] AWS Cognito pending browser re-auth (PKCE).</div>
+      <div class="composer">
+        <input id="msg" placeholder="Message the swarm…" />
+        <button onclick="send()">Send</button>
+      </div>
+    </section>
+    <div class="rail">
+      <p class="pill">providers</p>
+      <p style="margin:12px 0;color:var(--muted);font-size:13px">HF: <b style="color:var(--accent)">albedd</b><br/>Space: orbit-command-swarm<br/>Bucket: DeepSeek-V4… (19.3GB private)<br/>AWS: login waiter live</p>
+      <p class="pill">modules</p>
+      <p style="margin:12px 0;color:var(--muted);font-size:13px">SessionRegistry · LiveKitBridge · ParallelIngestion · max_stress · frontend chat hub</p>
+    </div>
+  </main>
+  <script>
+    const agents = [
+      ["DEP-01","ORBIT-LEAD"],["DEP-02","DEPLOY"],["DEP-03","CI"],["DEP-04","RELEASE"],["DEP-05","INFRA"],["DEP-06","SRE"],
+      ["FE-01","UI-LEAD"],["FE-02","CONSOLE"],["FE-03","FLEET"],["FE-04","STRAND"],["FE-05","SKILL-VAULT"],["FE-06","CHAT-HUB"],
+      ["RS-01","RESEARCH"],["RS-02","DOCS"],["RS-03","EVAL"],["RS-04","RAG"],["RS-05","LIVE-SESSION"],["RS-06","SCOPE"],
+      ["LC-01","LEARN"],["LC-02","CURRICULUM"],["LC-03","QUIZ"],["LC-04","MENTOR"],["LC-05","CERT"]
+    ];
+    const box = document.getElementById('agents');
+    agents.forEach(([id,role])=>{
+      const d=document.createElement('div'); d.className='agent';
+      d.innerHTML = `<b>${id}</b><i>${role}</i>`; box.appendChild(d);
+    });
+    function send(){
+      const i=document.getElementById('msg'); const t=i.value.trim(); if(!t) return;
+      const log=document.getElementById('log');
+      log.innerHTML += `<br/><span style="color:#e7efe9">[you]</span> ${t}`;
+      log.innerHTML += `<br/><span style="color:#3dcaa0">[FE-06]</span> routed via bridge · ack`;
+      i.value=''; log.scrollTop=log.scrollHeight;
+    }
+  </script>
+</body>
+</html>

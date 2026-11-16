@@ -1,0 +1,14 @@
+{
+  "part": 21,
+  "ts": "2026-11-16T21:54:03.269856+00:00",
+  "hf_user": "albedd",
+  "hf_bucket": "albedd/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-bucket",
+  "hf_bucket_size_bytes": 19331669338,
+  "hf_sync_config": "OK (excluded weights)",
+  "hf_example_cp": "pending",
+  "boto3_s3": "InvalidAccessKeyId \u2014 use hf buckets CLI",
+  "aws_login": "previous codes PKCE-dead; durable waiter WAITING new URL",
+  "chat_hub_frontend": "frontend/chat-hub/index.html",
+  "swarm": "23/23",
+  "primary": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+}
