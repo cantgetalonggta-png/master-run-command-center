@@ -1,0 +1,18 @@
+{
+  "schema": "gta.mrcc.parallel_tooling.v1",
+  "engines": [
+    "ParallelIngestionEngine (documented)",
+    "multi_agent_tooling",
+    "multi_provider",
+    "multi_process / subprocess.check_call patterns in supervisor workers",
+    "search_connected_tools + call_connected_tool (Vercel, GitHub active)",
+    "github___push_files / create_or_update_file",
+    "vercel list/deploy tools (project list empty under team \u2014 personal/static path via Git)"
+  ],
+  "limitations": [
+    "Vercel list_projects returns empty for team_kgQcPVmumwtmK3MdAGlxKJtg \u2014 deploy path is Git push to main (existing live surface)",
+    "Cannot interactive vercel login",
+    "LiveKit real tokens not in sandbox \u2014 bridge is config shim + heartbeat"
+  ],
+  "status": "DOCUMENTED_AND_OPERATIONAL_WHERE_POSSIBLE"
+}
