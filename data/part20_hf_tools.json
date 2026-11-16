@@ -1,0 +1,15 @@
+{
+  "part": 20,
+  "name": "hf_tools_gpt2_install_stack",
+  "transformers_pipeline": "OK",
+  "automodel": "OK GPT2LMHeadModel 124M",
+  "git_xet": "0.2.1",
+  "git_lfs": "3.6.1",
+  "hf_download": "/workspace/artifacts/models/gpt2-hf-download (model.safetensors 548MB)",
+  "git_clone_full": "partial fail LFS smudge transport",
+  "git_clone_skip_smudge": "OK pointers",
+  "hf_user": "albedd",
+  "hf_space": "https://huggingface.co/spaces/albedd/orbit-command-swarm",
+  "aws": "need re-auth; prior base64 code was for expired PKCE session",
+  "ts": "2026-11-16T21:43:07.937709+00:00"
+}
