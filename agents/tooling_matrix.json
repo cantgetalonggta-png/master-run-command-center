@@ -1,0 +1,386 @@
+{
+  "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf",
+  "count": 23,
+  "agents": [
+    {
+      "agent": "DEP-01",
+      "name": "ORBIT-LEAD",
+      "session_id": "cc9e9243-658a-4cbe-a525-64ff30a527b1",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644301,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "DEP-02",
+      "name": "PULSE-HEALTH",
+      "session_id": "ce377b6d-7675-4b61-ae31-98e5a91196db",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644363,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "DEP-03",
+      "name": "SHIP-GATE",
+      "session_id": "f6721477-7014-4145-9720-2b8f3a3e3842",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644404,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "DEP-04",
+      "name": "SYNC-BUS",
+      "session_id": "4c6eba44-2920-4be4-b9c3-d66d00ede5c8",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644444,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "DEP-05",
+      "name": "DEBUG-OPTS",
+      "session_id": "3de74dd2-95ff-4f75-aa39-70a9a8d5351c",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644483,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "DEP-06",
+      "name": "TASK-DAEMON",
+      "session_id": "ebc20f0d-ebde-4c91-85e9-8e5a2d754014",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644523,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "FE-01",
+      "name": "UI-SHELL",
+      "session_id": "d4c653e5-787a-45b5-8bee-e7476ab3fe22",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644564,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "FE-02",
+      "name": "SWARM-VIEW",
+      "session_id": "484f326c-c82e-41ec-8ca8-224b8357d885",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.664463,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "FE-03",
+      "name": "KPI-BOARD",
+      "session_id": "7844678c-d113-4527-9936-a3538c592083",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644666,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "FE-04",
+      "name": "ASSET-WIRE",
+      "session_id": "005e2c3a-b7ff-442a-8038-444d9b8f0dc6",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644719,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "FE-05",
+      "name": "A11Y-UX",
+      "session_id": "e16d3ccc-3337-4a86-b01f-bd1383f17860",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644757,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "FE-06",
+      "name": "EXPORT-IO",
+      "session_id": "2c65760f-401f-4f5c-be3a-1382bceadb25",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644793,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "RS-01",
+      "name": "SCOUT-WEB",
+      "session_id": "e9090d28-c561-4903-9faa-08d34ceaf250",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644833,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "RS-02",
+      "name": "SOURCE-MAP",
+      "session_id": "921b14f2-7589-41e3-8ece-14ad29a18d44",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.664487,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "RS-03",
+      "name": "CLAIM-SPLIT",
+      "session_id": "7401a12e-0623-450c-9b39-5a29adc70cdc",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.664491,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "RS-04",
+      "name": "REPORT-ARCH",
+      "session_id": "ce2954bb-efc3-43c9-9600-4a531ff19ac4",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644948,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "RS-05",
+      "name": "DIFF-WATCH",
+      "session_id": "44adc076-21f8-4ed6-9774-66a12ceea630",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6644983,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "RS-06",
+      "name": "SCOPE-GUARD",
+      "session_id": "cef674c7-4c0a-471b-9cd1-8d5f625510ac",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6645024,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "LC-01",
+      "name": "ONBOARD",
+      "session_id": "33b99792-d6c6-4d38-bb4a-48b6dc577068",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "file.read"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.664506,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "LC-02",
+      "name": "SKILL-LIB",
+      "session_id": "41968f09-f4ef-4ee8-a7e3-fe39dac662f1",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "file.read"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6645095,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "LC-03",
+      "name": "TOOLCHAIN",
+      "session_id": "bf31856a-0da8-41a2-8c3d-77b219058330",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "file.read"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6645148,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "LC-04",
+      "name": "RUNBOOK",
+      "session_id": "74fc3544-e3bf-4bff-8adf-49754bf11dc2",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "file.read"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6645186,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    },
+    {
+      "agent": "LC-05",
+      "name": "DRILL",
+      "session_id": "52e802b6-872c-48f9-8784-ced30e2e69dc",
+      "parent_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "file.read"
+      ],
+      "status": "ARMED",
+      "ts": 1794869877.6645222,
+      "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf"
+    }
+  ]
+}

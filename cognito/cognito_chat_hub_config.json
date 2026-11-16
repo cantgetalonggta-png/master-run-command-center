@@ -15,10 +15,9 @@
       "phone"
     ],
     "callbackUrls": [
-      "http://localhost:3000/auth/callback",
-      "http://localhost:5173/auth/callback",
-      "https://master-run-command-center.vercel.app/auth/callback",
-      "https://orbit-echo-ec69.vercel.app/auth/callback"
+      "http://localhost:3000/auth/callback/",
+      "https://master-run-command-center.vercel.app/auth/callback/",
+      "https://cantgetalonggta-png.github.io/master-run-command-center/auth/callback/"
     ],
     "authorizeUrl": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/oauth2/authorize",
     "tokenUrl": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/oauth2/token",
@@ -26,7 +25,10 @@
   },
   "testUser": {
     "username": "test@echo-ec69.dev",
-    "note": "password only in secure session"
+    "password_hint": "EchoEC69-Test-2026! (see secure note in session; rotate for prod)"
   },
-  "hostedUiLoginExample": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/login?client_id=1t94d90dg0lc6uiemlukj98p5u&response_type=code&scope=openid+email+profile&redirect_uri=http://localhost:3000/auth/callback"
+  "hostedUiLoginExample": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/login?client_id=1t94d90dg0lc6uiemlukj98p5u&response_type=code&scope=openid+email+profile&redirect_uri=http://localhost:3000/auth/callback",
+  "identityPoolId": "us-east-1:30f5888a-2359-4e47-a2ff-5942bec8582f",
+  "authenticatedRole": "arn:aws:iam::166147842499:role/OrbitChatHubAuthRole",
+  "unauthenticatedRole": "arn:aws:iam::166147842499:role/OrbitChatHubUnauthRole"
 }

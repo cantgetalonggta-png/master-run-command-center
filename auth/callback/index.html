@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Auth Callback · ORBIT</title>
+<link rel="stylesheet" href="../../frontend/css/orbit.css"/>
+<script src="../../frontend/js/config.js"></script>
+<script src="../../frontend/js/cognito.js"></script>
+</head>
+<body class="auth-body">
+<main class="card center">
+  <h1>Signing you in…</h1>
+  <p id="status" class="muted">Exchanging authorization code</p>
+  <pre id="debug" class="debug"></pre>
+  <a class="btn" href="../../">Back to dashboard</a>
+</main>
+<script>
+(async () => {
+  const status = document.getElementById("status");
+  const debug = document.getElementById("debug");
+  try {
+    const params = new URLSearchParams(location.search);
+    const err = params.get("error");
+    if (err) throw new Error(err + ": " + (params.get("error_description") || ""));
+    const code = params.get("code");
+    if (!code) throw new Error("missing_code — open Login from the app home");
+    status.textContent = "Code received — requesting tokens…";
+    const tokens = await OrbitCognito.exchangeCode(code);
+    const user = OrbitCognito.currentUser();
+    status.textContent = "Signed in as " + ((user && (user.email || user["cognito:username"])) || "user");
+    debug.textContent = JSON.stringify({
+      email: user && user.email,
+      sub: user && user.sub,
+      exp: user && user.exp,
+      token_type: tokens.token_type,
+      expires_in: tokens.expires_in,
+    }, null, 2);
+    setTimeout(() => { location.href = "../../#session"; }, 900);
+  } catch (e) {
+    status.textContent = "Auth failed";
+    debug.textContent = String(e);
+    status.classList.add("bad");
+  }
+})();
+</script>
+</body>
+</html>

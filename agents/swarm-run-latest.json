@@ -1,237 +1,296 @@
 {
-  "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
+  "run_id": "391c32b7-46e9-4bd9-9525-a37a2f471cdf",
   "ok": 23,
   "total": 23,
+  "kind": "tooling_matrix",
   "agents": [
     {
       "agent": "DEP-01",
-      "name": "ORBIT-LEAD",
-      "session_id": "b7d20f19-14ca-482c-a2b7-c7671fad2fc5",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "continuity lock + master workspace bind",
-      "status": "OK",
-      "ts": 1794869251.7875464,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "cc9e9243-658a-4cbe-a525-64ff30a527b1",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "OK"
     },
     {
       "agent": "DEP-02",
-      "name": "PULSE-HEALTH",
-      "session_id": "94474307-b050-4151-83c9-ae08ba8eb04d",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "health matrix aws/hf/gh/cognito",
-      "status": "OK",
-      "ts": 1794869251.7876844,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "ce377b6d-7675-4b61-ae31-98e5a91196db",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "OK"
     },
     {
       "agent": "DEP-03",
-      "name": "SHIP-GATE",
-      "session_id": "8b098f5d-424a-4592-b0f1-a7e6eb3cb294",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "deploy gate dashboard + cognito oauth",
-      "status": "OK",
-      "ts": 1794869251.7877352,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "f6721477-7014-4145-9720-2b8f3a3e3842",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "OK"
     },
     {
       "agent": "DEP-04",
-      "name": "SYNC-BUS",
-      "session_id": "06cbf704-9540-4106-8966-f4fda7093d26",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "artifact mirror MASTER_WORKSPACE",
-      "status": "OK",
-      "ts": 1794869251.7877727,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "4c6eba44-2920-4be4-b9c3-d66d00ede5c8",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "OK"
     },
     {
       "agent": "DEP-05",
-      "name": "DEBUG-OPTS",
-      "session_id": "9a36454a-0239-4fae-a529-1c1a62fd76a6",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "debug-opts catalogue refresh",
-      "status": "OK",
-      "ts": 1794869251.7878044,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "3de74dd2-95ff-4f75-aa39-70a9a8d5351c",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "OK"
     },
     {
       "agent": "DEP-06",
-      "name": "TASK-DAEMON",
-      "session_id": "8162b78a-6737-4f04-8bb0-cde54aad2f66",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "start max stress daemon 1800s",
-      "status": "OK",
-      "ts": 1794869251.7879717,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "ebc20f0d-ebde-4c91-85e9-8e5a2d754014",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "aws.sts",
+        "github.push",
+        "stress.inject"
+      ],
+      "status": "OK"
     },
     {
       "agent": "FE-01",
-      "name": "UI-SHELL",
-      "session_id": "25e2f812-aac2-41e5-939b-f7e17113b970",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "dashboard shell index.html",
-      "status": "OK",
-      "ts": 1794869251.788016,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "d4c653e5-787a-45b5-8bee-e7476ab3fe22",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "OK"
     },
     {
       "agent": "FE-02",
-      "name": "SWARM-VIEW",
-      "session_id": "ada64589-28f1-4eab-8985-081d907637e3",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "swarm 23 agent roster render data",
-      "status": "OK",
-      "ts": 1794869251.7880502,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "484f326c-c82e-41ec-8ca8-224b8357d885",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "OK"
     },
     {
       "agent": "FE-03",
-      "name": "KPI-BOARD",
-      "session_id": "37e330de-21ad-4177-932d-f496321f0d6c",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "KPI services ACTIVE map",
-      "status": "OK",
-      "ts": 1794869251.7880816,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "7844678c-d113-4527-9936-a3538c592083",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "OK"
     },
     {
       "agent": "FE-04",
-      "name": "ASSET-WIRE",
-      "session_id": "03ccb671-9231-431b-a4a5-1290bb951413",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "wire cognito + hf assets",
-      "status": "OK",
-      "ts": 1794869251.7881114,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "005e2c3a-b7ff-442a-8038-444d9b8f0dc6",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "OK"
     },
     {
       "agent": "FE-05",
-      "name": "A11Y-UX",
-      "session_id": "3f33e468-b258-4b74-a3dc-660906c6689e",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "a11y contrast dashboard dark theme",
-      "status": "OK",
-      "ts": 1794869251.7881405,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "e16d3ccc-3337-4a86-b01f-bd1383f17860",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "OK"
     },
     {
       "agent": "FE-06",
-      "name": "EXPORT-IO",
-      "session_id": "ffae4881-bad2-4244-bd84-e370fbe0dee3",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "export session_status.json",
-      "status": "OK",
-      "ts": 1794869251.7881691,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "2c65760f-401f-4f5c-be3a-1382bceadb25",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "cognito.auth"
+      ],
+      "status": "OK"
     },
     {
       "agent": "RS-01",
-      "name": "SCOUT-WEB",
-      "session_id": "ddd4facc-c629-4565-8352-3137a3da1cfd",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "surface inventory vercel+hf space",
-      "status": "OK",
-      "ts": 1794869251.7881975,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "e9090d28-c561-4903-9faa-08d34ceaf250",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "OK"
     },
     {
       "agent": "RS-02",
-      "name": "SOURCE-MAP",
-      "session_id": "e06683c5-4adf-48db-9975-8239a399bea1",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "provenance aws account + pool ids",
-      "status": "OK",
-      "ts": 1794869251.7882245,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "921b14f2-7589-41e3-8ece-14ad29a18d44",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "OK"
     },
     {
       "agent": "RS-03",
-      "name": "CLAIM-SPLIT",
-      "session_id": "f03eced8-5bff-4dc7-ba82-1fe569eda743",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "claims: cognito auth SOLID",
-      "status": "OK",
-      "ts": 1794869251.7882524,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "7401a12e-0623-450c-9b39-5a29adc70cdc",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "OK"
     },
     {
       "agent": "RS-04",
-      "name": "REPORT-ARCH",
-      "session_id": "b7b1b830-7d92-4efe-b7e8-96be09239ca2",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "report arch chat-hub bridge",
-      "status": "OK",
-      "ts": 1794869251.7882824,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "ce2954bb-efc3-43c9-9600-4a531ff19ac4",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "OK"
     },
     {
       "agent": "RS-05",
-      "name": "DIFF-WATCH",
-      "session_id": "efb082dd-71c0-41f8-be76-b20add633a93",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "diff: oauth client updated",
-      "status": "OK",
-      "ts": 1794869251.7883096,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "44adc076-21f8-4ed6-9774-66a12ceea630",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "OK"
     },
     {
       "agent": "RS-06",
-      "name": "SCOPE-GUARD",
-      "session_id": "e6be6498-8b92-409c-bc38-91caaf93fe54",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "scope: no secret commit",
-      "status": "OK",
-      "ts": 1794869251.7883391,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "cef674c7-4c0a-471b-9cd1-8d5f625510ac",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "hf.buckets"
+      ],
+      "status": "OK"
     },
     {
       "agent": "LC-01",
-      "name": "ONBOARD",
-      "session_id": "d5809d6a-d713-4791-8b38-1d0d383b2f6f",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "onboard RECONNECT.md",
-      "status": "OK",
-      "ts": 1794869251.788367,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "33b99792-d6c6-4d38-bb4a-48b6dc577068",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "file.read"
+      ],
+      "status": "OK"
     },
     {
       "agent": "LC-02",
-      "name": "SKILL-LIB",
-      "session_id": "3ac36ea2-837d-4ac6-83ab-1bb2d21ef089",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "skill lib 25 aws + hf",
-      "status": "OK",
-      "ts": 1794869251.788485,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "41968f09-f4ef-4ee8-a7e3-fe39dac662f1",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "file.read"
+      ],
+      "status": "OK"
     },
     {
       "agent": "LC-03",
-      "name": "TOOLCHAIN",
-      "session_id": "94b8af7a-cb83-4193-b153-830b2bb9adf4",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "toolchain boto3+hf buckets+aws cli",
-      "status": "OK",
-      "ts": 1794869251.7885232,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "bf31856a-0da8-41a2-8c3d-77b219058330",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "file.read"
+      ],
+      "status": "OK"
     },
     {
       "agent": "LC-04",
-      "name": "RUNBOOK",
-      "session_id": "75db7560-7c2b-48c3-b681-fa6075aee89f",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "runbook resume commands",
-      "status": "OK",
-      "ts": 1794869251.7885528,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "74fc3544-e3bf-4bff-8adf-49754bf11dc2",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "file.read"
+      ],
+      "status": "OK"
     },
     {
       "agent": "LC-05",
-      "name": "DRILL",
-      "session_id": "60a2f999-a838-4af3-8cfa-974bf053485a",
-      "run_id": "796bd16e-5cb4-45d4-bfd6-860725067e72",
-      "task": "drill test user login smoke",
-      "status": "OK",
-      "ts": 1794869251.7885816,
-      "root_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2"
+      "session_id": "52e802b6-872c-48f9-8784-ced30e2e69dc",
+      "tools": [
+        "file.read",
+        "file.search",
+        "swarm.delegate",
+        "session.merge",
+        "file.read"
+      ],
+      "status": "OK"
     }
   ]
 }
