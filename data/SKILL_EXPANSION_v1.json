@@ -1,0 +1,16 @@
+{
+  "schema": "gta.mrcc.skill_expansion.v1",
+  "primary_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "added": [
+    "bridge.session_registry",
+    "bridge.livekit_bridge",
+    "bridge.max_stress_daemon",
+    "chat_hub.production",
+    "multi_agent_tooling.delegate_to_session",
+    "parallel_ingestion_engine",
+    "multi_provider_routing",
+    "subprocess_orchestration"
+  ],
+  "debug_opts_active": 19,
+  "status": "EXPANDED"
+}
