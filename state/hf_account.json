@@ -1,0 +1,12 @@
+{
+  "name": "albedd",
+  "fullname": "bed",
+  "orgs": [],
+  "auth": "oauth",
+  "spaces": [
+    "albedd/orbit-command-swarm"
+  ],
+  "collections": [
+    "albedd/maximum-computational-effort-6af99ee5c9b6f21539d9973e"
+  ]
+}

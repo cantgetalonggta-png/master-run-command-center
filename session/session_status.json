@@ -1,0 +1,127 @@
+{
+  "schema": "gta.grok.future_session_merge.v3",
+  "primary_continuity_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "org": "ECHO-EC69",
+  "aws_account": "166147842499",
+  "console": "https://166147842499.signin.aws.amazon.com/console",
+  "hf_user": "albedd",
+  "github_user": "cantgetalonggta-png",
+  "profile_aws": "mrcc",
+  "region": "us-east-1",
+  "ts": 1794869234.6977818,
+  "hostname": "hds-n6pndaaqrl2i",
+  "paths": {
+    "master": "/workspace/work/MASTER_WORKSPACE",
+    "work": "/workspace/work",
+    "artifacts": "/workspace/artifacts",
+    "claude_skills": "/root/.claude/skills"
+  },
+  "cognito": {
+    "org": "ECHO-EC69",
+    "aws_account": "166147842499",
+    "region": "us-east-1",
+    "userPoolId": "us-east-1_yr5vuS7Kz",
+    "userPoolClientId": "1t94d90dg0lc6uiemlukj98p5u",
+    "domainPrefix": "orbit-echo-ec69-1yr5vus7kz",
+    "hostedUiBase": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com",
+    "oauth": {
+      "responseType": "code",
+      "scopes": [
+        "openid",
+        "email",
+        "profile",
+        "phone"
+      ],
+      "callbackUrls": [
+        "http://localhost:3000/auth/callback",
+        "http://localhost:5173/auth/callback",
+        "https://master-run-command-center.vercel.app/auth/callback",
+        "https://orbit-echo-ec69.vercel.app/auth/callback"
+      ],
+      "authorizeUrl": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/oauth2/authorize",
+      "tokenUrl": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/oauth2/token",
+      "logoutUrl": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/logout"
+    },
+    "testUser": {
+      "username": "test@echo-ec69.dev",
+      "password_hint": "EchoEC69-Test-2026! (see secure note in session; rotate for prod)"
+    },
+    "hostedUiLoginExample": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/login?client_id=1t94d90dg0lc6uiemlukj98p5u&response_type=code&scope=openid+email+profile&redirect_uri=http://localhost:3000/auth/callback"
+  },
+  "services": {
+    "aws_sts": {
+      "ok": true,
+      "detail": "{\n    \"UserId\": \"166147842499\",\n    \"Account\": \"166147842499\",\n    \"Arn\": \"arn:aws:iam::166147842499:root\"\n}"
+    },
+    "huggingface": {
+      "ok": true,
+      "detail": "user=albedd"
+    },
+    "github": {
+      "ok": true,
+      "detail": "github.com"
+    },
+    "boto3": {
+      "ok": true,
+      "detail": "1.44.4"
+    },
+    "cognito_user_password_auth": {
+      "ok": true,
+      "detail": "test@echo-ec69.dev CONFIRMED + token mint OK"
+    },
+    "cognito_oauth": {
+      "ok": true,
+      "detail": "code+implicit, callbacks wired"
+    },
+    "hf_bucket": {
+      "ok": true,
+      "detail": "albedd/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-bucket ~19.3GB 28 files"
+    },
+    "hf_space": {
+      "ok": true,
+      "detail": "albedd/orbit-command-swarm"
+    },
+    "hf_collection": {
+      "ok": true,
+      "detail": "albedd/maximum-computational-effort-6af99ee5c9b6f21539d9973e"
+    },
+    "agent_toolkit": {
+      "ok": true,
+      "detail": "25 skills in ~/.claude/skills"
+    }
+  },
+  "agents_23": [
+    "DEP-01 ORBIT-LEAD",
+    "DEP-02 PULSE-HEALTH",
+    "DEP-03 SHIP-GATE",
+    "DEP-04 SYNC-BUS",
+    "DEP-05 DEBUG-OPTS",
+    "DEP-06 TASK-DAEMON",
+    "FE-01 UI-SHELL",
+    "FE-02 SWARM-VIEW",
+    "FE-03 KPI-BOARD",
+    "FE-04 ASSET-WIRE",
+    "FE-05 A11Y-UX",
+    "FE-06 EXPORT-IO",
+    "RS-01 SCOUT-WEB",
+    "RS-02 SOURCE-MAP",
+    "RS-03 CLAIM-SPLIT",
+    "RS-04 REPORT-ARCH",
+    "RS-05 DIFF-WATCH",
+    "RS-06 SCOPE-GUARD",
+    "LC-01 ONBOARD",
+    "LC-02 SKILL-LIB",
+    "LC-03 TOOLCHAIN",
+    "LC-04 RUNBOOK",
+    "LC-05 DRILL"
+  ],
+  "triggers": {
+    "/dashboard": "session report + live capabilities",
+    "session report": "regenerate session_status.json",
+    "NEXT CONTINUE LOOP": "orchestration parts + stress",
+    "call_connected_tools": "Vercel/Drive/GitHub/Voice/Automations",
+    "aws agent-toolkit": "25 AWS skills + MCP",
+    "hf buckets": "HF storage",
+    "cognito hosted ui": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com"
+  }
+}

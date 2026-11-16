@@ -1,0 +1,32 @@
+{
+  "org": "ECHO-EC69",
+  "aws_account": "166147842499",
+  "region": "us-east-1",
+  "userPoolId": "us-east-1_yr5vuS7Kz",
+  "userPoolClientId": "1t94d90dg0lc6uiemlukj98p5u",
+  "domainPrefix": "orbit-echo-ec69-1yr5vus7kz",
+  "hostedUiBase": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com",
+  "oauth": {
+    "responseType": "code",
+    "scopes": [
+      "openid",
+      "email",
+      "profile",
+      "phone"
+    ],
+    "callbackUrls": [
+      "http://localhost:3000/auth/callback",
+      "http://localhost:5173/auth/callback",
+      "https://master-run-command-center.vercel.app/auth/callback",
+      "https://orbit-echo-ec69.vercel.app/auth/callback"
+    ],
+    "authorizeUrl": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/oauth2/authorize",
+    "tokenUrl": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/oauth2/token",
+    "logoutUrl": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/logout"
+  },
+  "testUser": {
+    "username": "test@echo-ec69.dev",
+    "note": "password only in secure session"
+  },
+  "hostedUiLoginExample": "https://orbit-echo-ec69-1yr5vus7kz.auth.us-east-1.amazoncognito.com/login?client_id=1t94d90dg0lc6uiemlukj98p5u&response_type=code&scope=openid+email+profile&redirect_uri=http://localhost:3000/auth/callback"
+}

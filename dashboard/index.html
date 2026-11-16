@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ECHO-EC69 · ORBIT Command Dashboard</title>
+<style>
+  :root { --bg:#0b0f14; --panel:#121821; --line:#1e2a38; --text:#e8eef6; --muted:#8aa0b5; --ok:#3ddc97; --warn:#f5c542; --bad:#ff6b6b; --acc:#5b9dff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: ui-sans-serif, system-ui, "Space Grotesk", sans-serif; background:var(--bg); color:var(--text); }
+  header { padding:20px 28px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+  h1 { margin:0; font-size:1.25rem; letter-spacing:.04em; }
+  .tag { font-family: ui-monospace, monospace; color:var(--muted); font-size:.8rem; }
+  main { padding:24px; display:grid; gap:16px; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); max-width:1400px; margin:0 auto; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .card h2 { margin:0 0 10px; font-size:.95rem; color:var(--acc); }
+  .row { display:flex; justify-content:space-between; gap:8px; padding:6px 0; border-bottom:1px solid #1a2430; font-size:.85rem; }
+  .row:last-child { border-bottom:0; }
+  .ok { color:var(--ok); } .bad { color:var(--bad); } .muted { color:var(--muted); }
+  code, pre { font-family: ui-monospace, "IBM Plex Mono", monospace; font-size:.75rem; }
+  pre { background:#0a1018; padding:10px; border-radius:8px; overflow:auto; max-height:220px; }
+  a { color:var(--acc); }
+  footer { text-align:center; color:var(--muted); padding:24px; font-size:.75rem; }
+  .pill { display:inline-block; padding:2px 8px; border-radius:999px; background:#1a2838; font-size:.7rem; margin-right:4px; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>ORBIT Command · ECHO-EC69</h1>
+    <div class="tag">primary session 211e2cba-1b23-5ce8-945a-d5e158b037a2 · future_session_merge v3</div>
+  </div>
+  <div class="tag">/dashboard · live capabilities</div>
+</header>
+<main id="main">
+  <div class="card"><h2>Loading session_status…</h2></div>
+</main>
+<footer>Master workspace · secrets redacted · AWS profile mrcc · HF albedd</footer>
+<script>
+async function load() {
+  let data = null;
+  try {
+    const r = await fetch('../session/session_status.json');
+    data = await r.json();
+  } catch(e) {
+    data = { services:{}, agents_23:[], triggers:{}, error: String(e) };
+  }
+  const svc = data.services || {};
+  const rows = Object.entries(svc).map(([k,v]) => {
+    const ok = v && v.ok;
+    return `<div class="row"><span>${k}</span><span class="${ok?'ok':'bad'}">${ok?'ACTIVE':'DOWN'}</span></div>`;
+  }).join('');
+  const agents = (data.agents_23||[]).map(a=>`<span class="pill">${a}</span>`).join(' ');
+  const trig = Object.entries(data.triggers||{}).map(([k,v])=>`<div class="row"><span>${k}</span><span class="muted">${v}</span></div>`).join('');
+  const cog = data.cognito || {};
+  document.getElementById('main').innerHTML = `
+    <div class="card"><h2>Services</h2>${rows||'<div class="muted">none</div>'}</div>
+    <div class="card"><h2>Identity</h2>
+      <div class="row"><span>Org</span><span>${data.org||''}</span></div>
+      <div class="row"><span>AWS</span><span>${data.aws_account||''}</span></div>
+      <div class="row"><span>HF</span><span>${data.hf_user||''}</span></div>
+      <div class="row"><span>GitHub</span><span>${data.github_user||''}</span></div>
+      <div class="row"><span>Region</span><span>${data.region||''}</span></div>
+    </div>
+    <div class="card"><h2>Cognito / Chat Hub</h2>
+      <div class="row"><span>Pool</span><span class="muted">${cog.userPoolId||''}</span></div>
+      <div class="row"><span>Client</span><span class="muted">${cog.userPoolClientId||''}</span></div>
+      <div class="row"><span>Domain</span><span class="muted">${cog.domainPrefix||''}</span></div>
+      <div class="row"><span>Hosted UI</span><span><a href="${cog.hostedUiBase||'#'}" target="_blank">open</a></span></div>
+    </div>
+    <div class="card"><h2>Triggers</h2>${trig}</div>
+    <div class="card" style="grid-column:1/-1"><h2>23 Agents</h2><div>${agents}</div></div>
+    <div class="card" style="grid-column:1/-1"><h2>Raw session_status</h2><pre>${JSON.stringify(data,null,2)}</pre></div>
+  `;
+}
+load();
+</script>
+</body>
+</html>
