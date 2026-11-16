@@ -1,0 +1,12 @@
+{
+  "part": 19,
+  "hf_user": "albedd",
+  "hf_space": "https://huggingface.co/spaces/albedd/orbit-command-swarm",
+  "aws_cli": "2.40.4",
+  "aws_profile": "mrcc",
+  "aws_region": "us-east-2",
+  "aws_experience": "new",
+  "aws_login": "WAITING_USER_AUTH_CODE",
+  "agent_toolkit": "pending_login",
+  "swarm": "23/23"
+}
