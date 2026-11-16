@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""LiveKitBridge production shim — configuration injection only."""
+"""LiveKitBridge production shim — configuration injection only.
+Does not require real LiveKit credentials; records config + heartbeats.
+"""
 from __future__ import annotations
-import json
+import json, time
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path("/workspace/artifacts")
+CFG = ROOT / "bridge" / "livekit_bridge_config.json"
 HB = ROOT / "state" / "bridge_heartbeat.jsonl"
 STATUS = ROOT / "state" / "bridge_status.json"
 

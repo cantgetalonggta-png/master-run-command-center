@@ -4,10 +4,51 @@
   "primary_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
   "config": {
     "reasoningEffort": "xhigh",
-    "modes": ["multi-step", "live-testing", "LIVE-DEPLOYMENT", "background_synchronization"],
+    "modes": [
+      "multi-step",
+      "live-testing",
+      "LIVE-DEPLOYMENT",
+      "background_synchronization"
+    ],
     "multiStep": true,
     "model": "grok-4.5-high",
-    "processing_abilities": ["parallel_ingestion", "multi_agent_tooling", "multi_provider", "subprocess"]
+    "processing_abilities": [
+      "parallel_ingestion",
+      "multi_agent_tooling",
+      "multi_provider",
+      "subprocess"
+    ]
+  },
+  "tools": {
+    "delegate_to_session": {
+      "type": "function",
+      "name": "delegate_to_session",
+      "description": "Sends a prompt to another configured session_id and returns its response.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "target_session_id": {
+            "type": "string"
+          },
+          "task_prompt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "target_session_id",
+          "task_prompt"
+        ]
+      }
+    },
+    "list_directory": {
+      "description": "list files under path"
+    },
+    "grep_search": {
+      "description": "search code"
+    },
+    "read_file": {
+      "description": "read file with optional lines"
+    }
   },
   "status": "PRODUCTION_READY"
 }
