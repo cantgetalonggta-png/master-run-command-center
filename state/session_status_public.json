@@ -1,0 +1,15 @@
+{
+  "schema": "gta.grok.future_session_merge.v3",
+  "primary_continuity_session": "211e2cba-1b23-5ce8-945a-d5e158b037a2",
+  "org": "ECHO-EC69",
+  "aws_account": "166147842499",
+  "region": "us-east-1",
+  "hf_user": "albedd",
+  "cognito": {
+    "userPoolId": "us-east-1_yr5vuS7Kz",
+    "clientId": "1t94d90dg0lc6uiemlukj98p5u",
+    "identityPoolId": "us-east-1:30f5888a-2359-4e47-a2ff-5942bec8582f",
+    "domain": "orbit-echo-ec69-1yr5vus7kz"
+  },
+  "frontend": "frontend/chat-hub/"
+}

@@ -1,0 +1,15 @@
+FUSE_NEXT_SESSION
+primary=211e2cba-1b23-5ce8-945a-d5e158b037a2
+org=ECHO-EC69
+
+export PATH="/root/.local/bin:$PATH"
+export AWS_ACCESS_KEY_ID="AKIA_REDACTED"
+export AWS_SECRET_ACCESS_KEY="SECRET_REDACTED"
+export AWS_DEFAULT_REGION=us-east-1
+export HF_TOKEN="HF_TOKEN_REDACTED"
+export INCOMING_SESSION_ID="<this_session_id>"
+export INCOMING_MODEL="<model_name>"
+
+bash /home/workdir/artifacts/scripts/session_fuse_bootstrap.sh
+# MERGE_ACK → /build — do not recreate Cognito
+# HF: albedd · space orbit-command-swarm · bucket DeepSeek-V4…
